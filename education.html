@@ -4,32 +4,479 @@
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
 <title>Education | K L Manish</title>
 
-<link rel="stylesheet" href="css/style.css">
+<style>
+
+/* =========================
+   BASIC SETTINGS
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background:
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(102, 227, 196, 0.12),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 90% 20%,
+            rgba(122, 167, 255, 0.12),
+            transparent 30%
+        ),
+        #080d1a;
+
+    color: #f5f7fb;
+
+    line-height: 1.6;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+header {
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: rgba(8, 13, 26, 0.92);
+
+    backdrop-filter: blur(15px);
+
+    border-bottom: 1px solid #26324a;
+}
+
+
+.navbar {
+
+    width: 90%;
+    max-width: 1150px;
+
+    height: 75px;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+.logo {
+
+    font-size: 26px;
+
+    font-weight: 800;
+
+    color: white;
+}
+
+
+.logo span {
+    color: #66e3c4;
+}
+
+
+.nav-links {
+
+    display: flex;
+
+    gap: 25px;
+
+    list-style: none;
+}
+
+
+.nav-links a {
+
+    color: #aab5c8;
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    transition: 0.3s;
+}
+
+
+.nav-links a:hover {
+    color: #66e3c4;
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+.container {
+
+    width: 90%;
+
+    max-width: 1150px;
+
+    margin: auto;
+}
+
+
+.page {
+
+    padding: 100px 0;
+}
+
+
+.small-title {
+
+    color: #66e3c4;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 20px;
+}
+
+
+h1 {
+
+    font-size: clamp(45px, 6vw, 70px);
+
+    line-height: 1.1;
+
+    margin-bottom: 20px;
+}
+
+
+h1 span {
+    color: #66e3c4;
+}
+
+
+.subtitle {
+
+    color: #aab5c8;
+
+    font-size: 18px;
+
+    max-width: 750px;
+
+    margin-bottom: 70px;
+}
+
+
+/* =========================
+   TIMELINE
+========================= */
+
+.timeline {
+
+    position: relative;
+
+    max-width: 900px;
+
+    margin: auto;
+
+    padding-left: 45px;
+}
+
+
+.timeline::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 10px;
+
+    top: 0;
+
+    bottom: 0;
+
+    width: 2px;
+
+    background: #26324a;
+}
+
+
+.timeline-item {
+
+    position: relative;
+
+    margin-bottom: 55px;
+
+    padding: 30px;
+
+    background:
+        rgba(18, 26, 45, 0.9);
+
+    border: 1px solid #26324a;
+
+    border-radius: 18px;
+
+    transition: 0.3s;
+}
+
+
+.timeline-item:hover {
+
+    transform: translateX(5px);
+
+    border-color: #66e3c4;
+
+    box-shadow:
+        0 15px 40px
+        rgba(0,0,0,0.25);
+}
+
+
+.timeline-dot {
+
+    position: absolute;
+
+    left: -43px;
+
+    top: 35px;
+
+    width: 16px;
+
+    height: 16px;
+
+    border-radius: 50%;
+
+    background: #66e3c4;
+
+    box-shadow:
+        0 0 20px
+        rgba(102,227,196,0.5);
+}
+
+
+.timeline-year {
+
+    display: inline-block;
+
+    color: #66e3c4;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 10px;
+}
+
+
+.timeline-item h2 {
+
+    font-size: 25px;
+
+    margin-bottom: 7px;
+}
+
+
+.timeline-item h3 {
+
+    color: #d5ddec;
+
+    font-size: 17px;
+
+    font-weight: normal;
+
+    margin-bottom: 15px;
+}
+
+
+.timeline-item p {
+
+    color: #aab5c8;
+
+    line-height: 1.7;
+}
+
+
+/* =========================
+   SUBJECTS
+========================= */
+
+.subjects {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-top: 20px;
+}
+
+
+.subjects span {
+
+    padding: 6px 11px;
+
+    border-radius: 20px;
+
+    background: #1b2740;
+
+    color: #d5ddec;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   CURRENT FOCUS
+========================= */
+
+.focus {
+
+    margin-top: 60px;
+
+    padding: 35px;
+
+    border-radius: 20px;
+
+    border: 1px solid #26324a;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(102,227,196,0.07),
+            rgba(122,167,255,0.07)
+        );
+}
+
+
+.focus h2 {
+    margin-bottom: 12px;
+}
+
+
+.focus p {
+    color: #aab5c8;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+    border-top: 1px solid #26324a;
+
+    padding: 30px;
+
+    text-align: center;
+
+    color: #7f8ba1;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width: 700px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .page {
+        padding: 70px 0;
+    }
+
+    .timeline {
+        padding-left: 30px;
+    }
+
+    .timeline::before {
+        left: 5px;
+    }
+
+    .timeline-dot {
+        left: -37px;
+    }
+
+    h1 {
+        font-size: 45px;
+    }
+
+}
+
+</style>
 
 </head>
 
+
 <body>
+
+
+<!-- =========================
+     NAVIGATION
+========================= -->
 
 <header>
 
 <nav class="navbar">
 
 <div class="logo">
-Manish<span>.</span>
+
+K L Manish<span>.</span>
+
 </div>
+
 
 <ul class="nav-links">
 
-<li><a href="index.html">Home</a></li>
-<li><a href="about.html">About</a></li>
-<li><a href="skills.html">Skills</a></li>
-<li><a href="projects.html">Projects</a></li>
-<li><a href="education.html">Education</a></li>
-<li><a href="contact.html">Contact</a></li>
+<li>
+<a href="index.html">Home</a>
+</li>
+
+<li>
+<a href="about.html">About</a>
+</li>
+
+<li>
+<a href="skills.html">Skills</a>
+</li>
+
+<li>
+<a href="projects.html">Projects</a>
+</li>
+
+<li>
+<a href="education.html">Education</a>
+</li>
+
+<li>
+<a href="contact.html">Contact</a>
+</li>
 
 </ul>
 
@@ -38,24 +485,54 @@ Manish<span>.</span>
 </header>
 
 
-<section class="page-section">
+
+<!-- =========================
+     EDUCATION
+========================= -->
+
+<section class="page">
 
 <div class="container">
 
+
 <p class="small-title">
-EDUCATION
+ACADEMIC JOURNEY
 </p>
 
+
 <h1>
-My <span>Education</span>
+
+My
+<span>Education.</span>
+
 </h1>
 
 
+<p class="subtitle">
+
+My academic background combines economics,
+statistics, econometrics and data analytics.
+
+</p>
+
+
+
+<!-- =========================
+     TIMELINE
+========================= -->
+
 <div class="timeline">
+
+
+<!-- MSc -->
 
 <div class="timeline-item">
 
 <div class="timeline-dot"></div>
+
+<div class="timeline-year">
+CURRENT
+</div>
 
 <h2>
 MSc Economics
@@ -67,49 +544,162 @@ Symbiosis School of Economics
 
 <p>
 
-Currently pursuing MSc Economics with coursework
-covering econometrics, economic growth, research
-methods, data analytics and applied economics.
+Currently pursuing my Master's degree in Economics,
+with a focus on quantitative analysis, econometrics,
+economic research and data analytics.
 
 </p>
 
+
+<div class="subjects">
+
+<span>Econometrics</span>
+
+<span>Economic Growth</span>
+
+<span>Data Analytics</span>
+
+<span>Research Methods</span>
+
+<span>Microeconomics</span>
+
+<span>Macroeconomics</span>
+
 </div>
 
+</div>
+
+
+
+<!-- DATA ANALYTICS -->
 
 <div class="timeline-item">
 
 <div class="timeline-dot"></div>
 
+<div class="timeline-year">
+SPECIALIZATION
+</div>
+
 <h2>
-Data Analytics Specialization
+Data Analytics
+</h2>
+
+<h3>
+Analytics & Quantitative Skills
+</h3>
+
+<p>
+
+Developing practical skills in Python, SQL, R,
+Excel, statistical analysis, data visualization
+and machine learning fundamentals.
+
+</p>
+
+
+<div class="subjects">
+
+<span>Python</span>
+
+<span>SQL</span>
+
+<span>R</span>
+
+<span>Excel</span>
+
+<span>Statistics</span>
+
+<span>Data Visualization</span>
+
+</div>
+
+</div>
+
+
+
+<!-- RESEARCH -->
+
+<div class="timeline-item">
+
+<div class="timeline-dot"></div>
+
+<div class="timeline-year">
+RESEARCH INTEREST
+</div>
+
+<h2>
+Economic Research
+</h2>
+
+<h3>
+Data-Driven Economic Analysis
+</h3>
+
+<p>
+
+My research interests include electric vehicle
+adoption, charging infrastructure, forecasting,
+economic trends and the use of quantitative
+methods to study real-world economic issues.
+
+</p>
+
+
+<div class="subjects">
+
+<span>EV Adoption</span>
+
+<span>Forecasting</span>
+
+<span>Economic Data</span>
+
+<span>Applied Research</span>
+
+</div>
+
+</div>
+
+
+</div>
+
+
+
+<!-- =========================
+     CURRENT FOCUS
+========================= -->
+
+<div class="focus">
+
+<h2>
+Current Academic Focus
 </h2>
 
 <p>
 
-Focus on Python, SQL, R, data cleaning,
-visualization, statistical analysis and
-machine learning fundamentals.
+I am currently strengthening my analytical skills
+by combining economics with programming and data
+analytics. My goal is to use quantitative methods
+to answer practical economic and business questions.
 
 </p>
 
 </div>
 
-</div>
 
 </div>
 
 </section>
 
 
+
 <footer>
 
-<p>
-© <span id="year"></span> K L Manish 
-</p>
+© 2026 K L Manish • Data Analytics Portfolio
 
 </footer>
 
-<script src="js/script.js"></script>
 
 </body>
+
 </html>
