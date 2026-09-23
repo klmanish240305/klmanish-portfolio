@@ -1,156 +1,675 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>K L Manish | Data Analytics Portfolio</title>
+<meta charset="UTF-8">
 
-    <link rel="stylesheet" href="css/style.css">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>K L Manish | Data Analytics Portfolio</title>
+
+<style>
+
+/* =========================
+   BASIC SETTINGS
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background:
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(102, 227, 196, 0.12),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 90% 20%,
+            rgba(122, 167, 255, 0.12),
+            transparent 30%
+        ),
+        #080d1a;
+
+    color: #f5f7fb;
+
+    line-height: 1.6;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: rgba(8, 13, 26, 0.92);
+
+    backdrop-filter: blur(15px);
+
+    border-bottom: 1px solid #26324a;
+}
+
+.navbar {
+
+    width: 90%;
+    max-width: 1150px;
+
+    height: 75px;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+.logo {
+
+    font-size: 26px;
+
+    font-weight: 800;
+
+    color: white;
+}
+
+.logo span {
+    color: #66e3c4;
+}
+
+.nav-links {
+
+    display: flex;
+
+    gap: 25px;
+
+    list-style: none;
+}
+
+.nav-links a {
+
+    color: #aab5c8;
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+
+    color: #66e3c4;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+
+    width: 90%;
+
+    max-width: 1150px;
+
+    min-height: 85vh;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1.5fr 0.8fr;
+
+    gap: 60px;
+
+    align-items: center;
+}
+
+.small-title {
+
+    color: #66e3c4;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+
+    font-size: clamp(50px, 7vw, 85px);
+
+    line-height: 1;
+
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+
+    color: #66e3c4;
+}
+
+.hero h2 {
+
+    color: #d5ddec;
+
+    font-size: 25px;
+
+    margin-bottom: 20px;
+}
+
+.hero p {
+
+    color: #aab5c8;
+
+    font-size: 18px;
+
+    max-width: 700px;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.buttons {
+
+    display: flex;
+
+    gap: 15px;
+
+    margin-top: 30px;
+
+    flex-wrap: wrap;
+}
+
+.btn {
+
+    display: inline-block;
+
+    padding: 13px 24px;
+
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    font-weight: 700;
+
+    transition: 0.3s;
+}
+
+.primary {
+
+    background: #66e3c4;
+
+    color: #06100d;
+}
+
+.primary:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 30px
+        rgba(102, 227, 196, 0.25);
+}
+
+.secondary {
+
+    border: 1px solid #35435e;
+
+    color: white;
+}
+
+.secondary:hover {
+
+    border-color: #66e3c4;
+
+    color: #66e3c4;
+}
+
+
+/* =========================
+   PROFILE CARD
+========================= */
+
+.profile-card {
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(25, 38, 65, 0.95),
+            rgba(13, 21, 38, 0.95)
+        );
+
+    border: 1px solid #26324a;
+
+    border-radius: 25px;
+
+    padding: 45px 30px;
+
+    text-align: center;
+
+    box-shadow:
+        0 20px 60px
+        rgba(0,0,0,0.35);
+}
+
+.avatar {
+
+    width: 170px;
+
+    height: 170px;
+
+    margin: auto;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 55px;
+
+    font-weight: 800;
+
+    color: #071411;
+
+    background:
+        linear-gradient(
+            135deg,
+            #7aa7ff,
+            #66e3c4
+        );
+
+    box-shadow:
+        0 0 60px
+        rgba(102, 227, 196, 0.15);
+}
+
+.profile-card h2 {
+
+    margin-top: 25px;
+
+    font-size: 27px;
+}
+
+.profile-card p {
+
+    color: #aab5c8;
+
+    margin-top: 8px;
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+.section {
+
+    padding: 100px 0;
+}
+
+.container {
+
+    width: 90%;
+
+    max-width: 1150px;
+
+    margin: auto;
+}
+
+.section-title {
+
+    font-size: 42px;
+
+    margin-bottom: 40px;
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.cards {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.card {
+
+    background:
+        rgba(18, 26, 45, 0.85);
+
+    border: 1px solid #26324a;
+
+    border-radius: 18px;
+
+    padding: 30px;
+
+    transition: 0.3s;
+}
+
+.card:hover {
+
+    transform: translateY(-7px);
+
+    border-color: #66e3c4;
+
+    box-shadow:
+        0 15px 40px
+        rgba(0,0,0,0.25);
+}
+
+.card h3 {
+
+    font-size: 22px;
+
+    margin-bottom: 12px;
+}
+
+.card p {
+
+    color: #aab5c8;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+    border-top: 1px solid #26324a;
+
+    padding: 30px;
+
+    text-align: center;
+
+    color: #7f8ba1;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width: 800px) {
+
+    .nav-links {
+
+        display: none;
+    }
+
+    .hero {
+
+        grid-template-columns: 1fr;
+
+        padding: 70px 0;
+    }
+
+    .hero h1 {
+
+        font-size: 52px;
+    }
+
+    .cards {
+
+        grid-template-columns: 1fr;
+    }
+
+    .profile-card {
+
+        max-width: 400px;
+
+        margin: auto;
+    }
+
+}
+
+</style>
+
 </head>
+
 
 <body>
 
+
+<!-- NAVIGATION -->
+
 <header>
-    <nav class="navbar">
 
-        <div class="logo">
-            Manish<span>.</span>
-        </div>
+<nav class="navbar">
 
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="skills.html">Skills</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="education.html">Education</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
+<div class="logo">
+K L Manish<span>.</span>
+</div>
 
-    </nav>
+<ul class="nav-links">
+
+<li>
+<a href="index.html">Home</a>
+</li>
+
+<li>
+<a href="about.html">About</a>
+</li>
+
+<li>
+<a href="skills.html">Skills</a>
+</li>
+
+<li>
+<a href="projects.html">Projects</a>
+</li>
+
+<li>
+<a href="education.html">Education</a>
+</li>
+
+<li>
+<a href="contact.html">Contact</a>
+</li>
+
+</ul>
+
+</nav>
+
 </header>
 
 
-<main>
+
+<!-- HERO -->
 
 <section class="hero">
 
-    <div class="hero-content">
+<div>
 
-        <p class="small-title">
-            MSc Economics • Data Analytics
-        </p>
+<p class="small-title">
+MSc ECONOMICS • DATA ANALYTICS
+</p>
 
-        <h1>
-            Hi, I'm <span>K L Manish</span>
-        </h1>
+<h1>
 
-        <h2>
-            Economics Student & Data Analytics Enthusiast
-        </h2>
+Hi, I'm
 
-        <p>
-            I am interested in data analytics, econometrics,
-            forecasting, statistical analysis and economic research.
-            I enjoy turning raw data into meaningful insights.
-        </p>
+<span>K L Manish.</span>
 
-        <div class="buttons">
+</h1>
 
-            <a href="projects.html" class="btn primary">
-                View My Projects
-            </a>
+<h2>
 
-            <a href="contact.html" class="btn secondary">
-                Contact Me
-            </a>
+Economics Student & Data Analytics Enthusiast
 
-        </div>
+</h2>
 
-    </div>
+<p>
+
+I am interested in data analytics, econometrics,
+forecasting, statistical analysis and economic research.
+I enjoy turning raw data into meaningful insights.
+
+</p>
 
 
-    <div class="profile-card">
+<div class="buttons">
 
-        <div class="avatar">
-            MG
-        </div>
+<a
+href="projects.html"
+class="btn primary">
 
-        <h2>K L Manish </h2>
+View My Projects
 
-        <p>
-            MSc Economics | Data Analytics
-        </p>
+</a>
 
-    </div>
+
+<a
+href="contact.html"
+class="btn secondary">
+
+Contact Me
+
+</a>
+
+</div>
+
+</div>
+
+
+
+<!-- PROFILE -->
+
+<div class="profile-card">
+
+<div class="avatar">
+
+KM
+
+</div>
+
+<h2>
+K L Manish
+</h2>
+
+<p>
+MSc Economics | Data Analytics
+</p>
+
+</div>
 
 </section>
 
+
+
+<!-- WHAT I DO -->
 
 <section class="section">
 
-    <div class="container">
+<div class="container">
 
-        <h2 class="section-title">
-            What I Do
-        </h2>
+<h2 class="section-title">
 
-        <div class="cards">
+What I Do
 
-            <div class="card">
-
-                <h3>Data Analytics</h3>
-
-                <p>
-                    Data cleaning, exploratory data analysis,
-                    visualization and interpretation.
-                </p>
-
-            </div>
+</h2>
 
 
-            <div class="card">
-
-                <h3>Econometrics</h3>
-
-                <p>
-                    Regression analysis, hypothesis testing,
-                    time-series analysis and statistical modelling.
-                </p>
-
-            </div>
+<div class="cards">
 
 
-            <div class="card">
+<div class="card">
 
-                <h3>Economic Research</h3>
+<h3>
+Data Analytics
+</h3>
 
-                <p>
-                    Applying economic theory and data to study
-                    real-world economic problems.
-                </p>
+<p>
 
-            </div>
+Data cleaning, exploratory data analysis,
+visualization and interpretation.
 
-        </div>
+</p>
 
-    </div>
+</div>
+
+
+
+<div class="card">
+
+<h3>
+Econometrics
+</h3>
+
+<p>
+
+Regression analysis, hypothesis testing,
+time-series analysis and statistical modelling.
+
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>
+Economic Research
+</h3>
+
+<p>
+
+Using economics and data to understand
+real-world economic problems.
+
+</p>
+
+</div>
+
+
+</div>
+
+</div>
 
 </section>
 
-</main>
 
 
 <footer>
 
-    <p>
-        © <span id="year"></span> Manish Gowda
-    </p>
+© 2026 K L Manish • Data Analytics Portfolio
 
 </footer>
 
 
-<script src="js/script.js"></script>
-
 </body>
+
 </html>
