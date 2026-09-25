@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>K L Manish | Economics & Data Analytics</title>
 
     <style>
+
         * {
             margin: 0;
             padding: 0;
@@ -22,6 +25,7 @@
             background: #07111f;
             color: #f2f7ff;
             line-height: 1.6;
+            transition: background 0.3s ease, color 0.3s ease;
         }
 
         a {
@@ -29,11 +33,14 @@
             color: inherit;
         }
 
-        /* NAVBAR */
+
+        /* =========================
+           NAVBAR
+        ========================= */
 
         nav {
             width: 100%;
-            padding: 20px 8%;
+            padding: 18px 8%;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -42,12 +49,36 @@
             position: sticky;
             top: 0;
             z-index: 1000;
+            transition: 0.3s;
         }
 
+
+        /* PROFILE NAME */
+
         .logo {
-            font-size: 24px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 22px;
             font-weight: bold;
             color: #66e3c4;
+        }
+
+        .logo img {
+            width: 42px;
+            height: 42px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 2px solid #66e3c4;
+        }
+
+
+        /* NAV LINKS */
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 25px;
         }
 
         .nav-links {
@@ -66,7 +97,32 @@
             color: #66e3c4;
         }
 
-        /* HERO */
+
+        /* =========================
+           DARK / LIGHT MODE BUTTON
+        ========================= */
+
+        .theme-toggle {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            border: 1px solid #66e3c4;
+            background: transparent;
+            color: #66e3c4;
+            font-size: 19px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .theme-toggle:hover {
+            background: #66e3c4;
+            color: #07111f;
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
 
         .hero {
             min-height: 88vh;
@@ -117,7 +173,10 @@
             margin-bottom: 30px;
         }
 
-        /* BUTTONS */
+
+        /* =========================
+           BUTTONS
+        ========================= */
 
         .buttons {
             display: flex;
@@ -153,7 +212,10 @@
             color: #07111f;
         }
 
-        /* PROFILE CARD */
+
+        /* =========================
+           PROFILE CARD
+        ========================= */
 
         .profile-card {
             background: #0c1a2b;
@@ -162,6 +224,7 @@
             padding: 45px 30px;
             text-align: center;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+            transition: 0.3s;
         }
 
         .profile-photo {
@@ -184,7 +247,10 @@
             margin-bottom: 0;
         }
 
-        /* WHAT I DO */
+
+        /* =========================
+           WHAT I DO
+        ========================= */
 
         .section {
             padding: 80px 8%;
@@ -238,12 +304,16 @@
             color: #9eafc4;
         }
 
-        /* GITHUB */
+
+        /* =========================
+           GITHUB SECTION
+        ========================= */
 
         .github-section {
             text-align: center;
             padding: 70px 8%;
             background: #091525;
+            transition: 0.3s;
         }
 
         .github-section h2 {
@@ -256,7 +326,10 @@
             margin-bottom: 25px;
         }
 
-        /* FOOTER */
+
+        /* =========================
+           FOOTER
+        ========================= */
 
         footer {
             padding: 25px 8%;
@@ -264,9 +337,76 @@
             border-top: 1px solid #16263b;
             color: #7f91a8;
             font-size: 14px;
+            transition: 0.3s;
         }
 
-        /* MOBILE */
+
+        /* =========================
+           LIGHT MODE
+        ========================= */
+
+        body.light-mode {
+            background: #f4f7fb;
+            color: #172033;
+        }
+
+        body.light-mode nav {
+            background: #ffffff;
+            border-bottom: 1px solid #dce3ec;
+        }
+
+        body.light-mode .nav-links a {
+            color: #435066;
+        }
+
+        body.light-mode .nav-links a:hover {
+            color: #168f78;
+        }
+
+        body.light-mode .hero h2 {
+            color: #435066;
+        }
+
+        body.light-mode .hero p {
+            color: #617086;
+        }
+
+        body.light-mode .profile-card {
+            background: #ffffff;
+            border-color: #dce3ec;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+        }
+
+        body.light-mode .profile-card p {
+            color: #617086;
+        }
+
+        body.light-mode .card {
+            background: #ffffff;
+            border-color: #dce3ec;
+        }
+
+        body.light-mode .card p {
+            color: #617086;
+        }
+
+        body.light-mode .github-section {
+            background: #eaf0f6;
+        }
+
+        body.light-mode .github-section p {
+            color: #617086;
+        }
+
+        body.light-mode footer {
+            border-top-color: #dce3ec;
+            color: #718096;
+        }
+
+
+        /* =========================
+           TABLET
+        ========================= */
 
         @media (max-width: 850px) {
 
@@ -276,6 +416,10 @@
 
             .nav-links a {
                 font-size: 13px;
+            }
+
+            .nav-right {
+                gap: 12px;
             }
 
             .hero {
@@ -308,24 +452,45 @@
                 max-width: 450px;
                 margin: auto;
             }
+
         }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
 
         @media (max-width: 600px) {
 
             nav {
-                padding: 15px 5%;
+                padding: 12px 5%;
             }
 
             .logo {
-                font-size: 20px;
+                font-size: 17px;
+            }
+
+            .logo img {
+                width: 36px;
+                height: 36px;
+            }
+
+            .nav-right {
+                gap: 7px;
             }
 
             .nav-links {
-                gap: 8px;
+                gap: 7px;
             }
 
             .nav-links a {
-                font-size: 11px;
+                font-size: 10px;
+            }
+
+            .theme-toggle {
+                width: 36px;
+                height: 36px;
+                font-size: 16px;
             }
 
             .hero {
@@ -345,33 +510,93 @@
                 padding-left: 5%;
                 padding-right: 5%;
             }
+
         }
+
     </style>
+
 </head>
+
 
 <body>
 
-    <!-- NAVBAR -->
+
+    <!-- =========================
+         NAVBAR
+    ========================= -->
 
     <nav>
-        <div class="logo">KLM</div>
 
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="skills.html">Skills</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="education.html">Education</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
+        <div class="logo">
+
+            <img
+                src="assets/profile.jpg"
+                alt="K L Manish"
+            >
+
+            <span>
+                K L Manish
+            </span>
+
+        </div>
+
+
+        <div class="nav-right">
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+
+                <li>
+                    <a href="skills.html">Skills</a>
+                </li>
+
+                <li>
+                    <a href="projects.html">Projects</a>
+                </li>
+
+                <li>
+                    <a href="education.html">Education</a>
+                </li>
+
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+
+            </ul>
+
+
+            <!-- THEME BUTTON -->
+
+            <button
+                class="theme-toggle"
+                id="themeToggle"
+                onclick="toggleTheme()"
+                aria-label="Toggle dark and light mode"
+            >
+                ☀️
+            </button>
+
+        </div>
+
     </nav>
 
 
-    <!-- HERO SECTION -->
+
+    <!-- =========================
+         HERO SECTION
+    ========================= -->
 
     <section class="hero">
 
         <div class="hero-container">
+
 
             <div class="hero-text">
 
@@ -388,28 +613,41 @@
                 </h2>
 
                 <p>
-                    I am an MSc Economics student specializing in Data Analytics,
-                    with an interest in data analysis, econometrics, economic research,
-                    visualization and forecasting.
+                    I am an MSc Economics student specializing in
+                    Data Analytics, with an interest in data analysis,
+                    econometrics, economic research, visualization
+                    and forecasting.
                 </p>
+
 
                 <div class="buttons">
 
-                    <a href="projects.html" class="btn primary">
+                    <a
+                        href="projects.html"
+                        class="btn primary"
+                    >
                         View My Projects
                     </a>
 
-                    <a href="contact.html" class="btn secondary">
+                    <a
+                        href="contact.html"
+                        class="btn secondary"
+                    >
                         Contact Me
                     </a>
 
-                    <a href="assets/resume.pdf" class="btn secondary" download>
+                    <a
+                        href="assets/resume.pdf"
+                        class="btn secondary"
+                        download
+                    >
                         Download Resume
                     </a>
 
                 </div>
 
             </div>
+
 
 
             <!-- PROFILE CARD -->
@@ -422,7 +660,9 @@
                     class="profile-photo"
                 >
 
-                <h2>K L Manish</h2>
+                <h2>
+                    K L Manish
+                </h2>
 
                 <p>
                     MSc Economics | Data Analytics
@@ -430,12 +670,16 @@
 
             </div>
 
+
         </div>
 
     </section>
 
 
-    <!-- WHAT I DO -->
+
+    <!-- =========================
+         WHAT I DO
+    ========================= -->
 
     <section class="section">
 
@@ -443,7 +687,9 @@
 
             <div class="section-title">
 
-                <h2>What I Do</h2>
+                <h2>
+                    What I Do
+                </h2>
 
                 <p>
                     Combining economics with data and analytical techniques.
@@ -454,14 +700,17 @@
 
             <div class="cards">
 
+
                 <div class="card">
 
-                    <h3>Data Analytics</h3>
+                    <h3>
+                        Data Analytics
+                    </h3>
 
                     <p>
                         Data cleaning, exploratory data analysis,
-                        visualization and extracting meaningful insights
-                        using Python, Pandas, SQL and Excel.
+                        visualization and extracting meaningful
+                        insights using Python, Pandas, SQL and Excel.
                     </p>
 
                 </div>
@@ -469,7 +718,9 @@
 
                 <div class="card">
 
-                    <h3>Econometrics</h3>
+                    <h3>
+                        Econometrics
+                    </h3>
 
                     <p>
                         Applying econometric techniques such as OLS,
@@ -482,7 +733,9 @@
 
                 <div class="card">
 
-                    <h3>Economic Research</h3>
+                    <h3>
+                        Economic Research
+                    </h3>
 
                     <p>
                         Conducting research using economic data,
@@ -492,6 +745,7 @@
 
                 </div>
 
+
             </div>
 
         </div>
@@ -499,11 +753,16 @@
     </section>
 
 
-    <!-- GITHUB SECTION -->
+
+    <!-- =========================
+         GITHUB SECTION
+    ========================= -->
 
     <section class="github-section">
 
-        <h2>Explore My GitHub</h2>
+        <h2>
+            Explore My GitHub
+        </h2>
 
         <p>
             Check out my projects, analysis and coding work.
@@ -512,6 +771,7 @@
         <a
             href="https://github.com/klmanish240305"
             target="_blank"
+            rel="noopener noreferrer"
             class="btn primary"
         >
             Visit My GitHub
@@ -520,7 +780,10 @@
     </section>
 
 
-    <!-- FOOTER -->
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
 
     <footer>
 
@@ -528,5 +791,60 @@
 
     </footer>
 
+
+
+    <!-- =========================
+         DARK / LIGHT MODE SCRIPT
+    ========================= -->
+
+    <script>
+
+        const themeToggle = document.getElementById("themeToggle");
+
+        function applyTheme(theme) {
+
+            if (theme === "light") {
+
+                document.body.classList.add("light-mode");
+
+                themeToggle.textContent = "🌙";
+
+            } else {
+
+                document.body.classList.remove("light-mode");
+
+                themeToggle.textContent = "☀️";
+
+            }
+
+        }
+
+
+        function toggleTheme() {
+
+            const currentTheme =
+                localStorage.getItem("theme") || "dark";
+
+            const newTheme =
+                currentTheme === "dark" ? "light" : "dark";
+
+            localStorage.setItem("theme", newTheme);
+
+            applyTheme(newTheme);
+
+        }
+
+
+        /* Load saved theme */
+
+        const savedTheme =
+            localStorage.getItem("theme") || "dark";
+
+        applyTheme(savedTheme);
+
+    </script>
+
+
 </body>
+
 </html>
