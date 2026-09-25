@@ -24,7 +24,7 @@
     /* NAVBAR */
     nav {
       width: 100%;
-      padding: 16px 7%;
+      padding: 15px 7%;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -33,7 +33,6 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-      transition: 0.3s ease;
     }
 
     .logo {
@@ -84,17 +83,12 @@
     #themeToggle {
       border: none;
       background: #102238;
-      color: #ffffff;
+      color: white;
       width: 40px;
       height: 40px;
       border-radius: 50%;
       cursor: pointer;
       font-size: 18px;
-      transition: 0.3s;
-    }
-
-    #themeToggle:hover {
-      transform: scale(1.08);
     }
 
     /* MAIN */
@@ -124,7 +118,7 @@
       font-size: 16px;
     }
 
-    /* SKILLS GRID */
+    /* SKILLS */
     .skills-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -163,7 +157,6 @@
       padding: 8px 13px;
       border-radius: 20px;
       font-size: 13px;
-      transition: 0.3s ease;
     }
 
     .skill:hover {
@@ -211,7 +204,7 @@
 
     body.light-mode nav {
       background: #ffffff;
-      border-bottom: 1px solid #dfe5ec;
+      border-color: #dfe5ec;
     }
 
     body.light-mode .nav-links a {
@@ -276,7 +269,7 @@
     }
 
     /* MOBILE */
-    @media (max-width: 800px) {
+    @media (max-width: 850px) {
 
       nav {
         padding: 14px 5%;
@@ -287,11 +280,11 @@
       }
 
       .nav-links {
-        gap: 10px;
+        gap: 9px;
       }
 
       .nav-links a {
-        font-size: 12px;
+        font-size: 11px;
       }
 
       .logo span {
@@ -351,109 +344,145 @@
   <main class="container">
 
     <div class="page-title">
+
       <h1>My <span>Skills</span></h1>
-      <p>Technical, analytical and research skills</p>
+
+      <p>
+        Technical, analytical and research skills
+      </p>
+
     </div>
 
 
     <section class="skills-grid">
 
+
       <!-- PYTHON -->
       <div class="skill-card">
+
         <h2>🐍 Python & Data</h2>
 
         <div class="skill-list">
+
           <span class="skill">Python</span>
           <span class="skill">Pandas</span>
           <span class="skill">NumPy</span>
           <span class="skill">Matplotlib</span>
+
         </div>
+
       </div>
 
 
       <!-- SQL -->
       <div class="skill-card">
+
         <h2>🗄️ SQL & Database</h2>
 
         <div class="skill-list">
+
           <span class="skill">SQL</span>
           <span class="skill">MySQL</span>
           <span class="skill">Queries</span>
           <span class="skill">Database</span>
+
         </div>
+
       </div>
 
 
       <!-- ECONOMETRICS -->
       <div class="skill-card">
+
         <h2>📊 Econometrics</h2>
 
         <div class="skill-list">
+
           <span class="skill">OLS</span>
           <span class="skill">Logit</span>
           <span class="skill">Probit</span>
           <span class="skill">2SLS</span>
+
         </div>
+
       </div>
 
 
       <!-- TIME SERIES -->
       <div class="skill-card">
+
         <h2>📈 Time Series</h2>
 
         <div class="skill-list">
+
           <span class="skill">AR</span>
           <span class="skill">VAR</span>
           <span class="skill">VEC</span>
           <span class="skill">GARCH</span>
+
         </div>
+
       </div>
 
 
       <!-- DATA ANALYTICS -->
       <div class="skill-card">
+
         <h2>🔎 Data Analytics</h2>
 
         <div class="skill-list">
+
           <span class="skill">Data Cleaning</span>
           <span class="skill">EDA</span>
           <span class="skill">Visualization</span>
           <span class="skill">Forecasting</span>
+
         </div>
+
       </div>
 
 
-      <!-- BI -->
+      <!-- BUSINESS INTELLIGENCE -->
       <div class="skill-card">
+
         <h2>📊 Business Intelligence</h2>
 
         <div class="skill-list">
+
           <span class="skill">Power BI</span>
           <span class="skill">Tableau</span>
           <span class="skill">Dashboards</span>
           <span class="skill">Data Visualization</span>
+
         </div>
+
       </div>
 
 
       <!-- RESEARCH -->
       <div class="skill-card">
+
         <h2>📚 Research & Analysis</h2>
 
         <div class="skill-list">
+
           <span class="skill">Research</span>
           <span class="skill">Data Analysis</span>
           <span class="skill">Interpretation</span>
           <span class="skill">Report Writing</span>
+
         </div>
+
       </div>
 
 
       <!-- TOOLS -->
       <div class="skill-card">
+
         <h2>🛠️ Tools & Software</h2>
 
         <div class="skill-list">
+
           <span class="skill">R</span>
           <span class="skill">Excel</span>
           <span class="skill">Stata</span>
@@ -461,7 +490,9 @@
           <span class="skill">Google Colab</span>
           <span class="skill">Jupyter Notebook</span>
           <span class="skill">GitHub</span>
+
         </div>
+
       </div>
 
     </section>
