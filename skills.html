@@ -3,423 +3,225 @@
 
 <head>
 
-<meta charset="UTF-8">
-
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
-
-<title>Skills | K L Manish</title>
-
-<style>
-
-/* =========================
-   BASIC SETTINGS
-========================= */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-
-    font-family: Arial, Helvetica, sans-serif;
-
-    background:
-        radial-gradient(
-            circle at 10% 10%,
-            rgba(102, 227, 196, 0.12),
-            transparent 30%
-        ),
-        radial-gradient(
-            circle at 90% 20%,
-            rgba(122, 167, 255, 0.12),
-            transparent 30%
-        ),
-        #080d1a;
-
-    color: #f5f7fb;
-
-    line-height: 1.6;
-}
-
-
-/* =========================
-   NAVBAR
-========================= */
-
-header {
-
-    position: sticky;
-
-    top: 0;
-
-    z-index: 1000;
-
-    background: rgba(8, 13, 26, 0.92);
-
-    backdrop-filter: blur(15px);
-
-    border-bottom: 1px solid #26324a;
-}
-
-
-.navbar {
-
-    width: 90%;
-
-    max-width: 1150px;
-
-    height: 75px;
-
-    margin: auto;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: space-between;
-}
-
-
-.logo {
-
-    font-size: 26px;
-
-    font-weight: 800;
-
-    color: white;
-}
-
-
-.logo span {
-
-    color: #66e3c4;
-}
-
-
-.nav-links {
-
-    display: flex;
-
-    gap: 25px;
-
-    list-style: none;
-}
-
-
-.nav-links a {
-
-    color: #aab5c8;
-
-    text-decoration: none;
-
-    font-size: 15px;
-
-    transition: 0.3s;
-}
-
-
-.nav-links a:hover {
-
-    color: #66e3c4;
-}
-
-
-/* =========================
-   MAIN
-========================= */
-
-.container {
-
-    width: 90%;
-
-    max-width: 1150px;
-
-    margin: auto;
-}
-
-
-.page {
-
-    padding: 100px 0;
-}
-
-
-.small-title {
-
-    color: #66e3c4;
-
-    font-size: 14px;
-
-    font-weight: bold;
-
-    letter-spacing: 3px;
-
-    margin-bottom: 20px;
-}
-
-
-h1 {
-
-    font-size: clamp(45px, 6vw, 70px);
-
-    line-height: 1.1;
-
-    margin-bottom: 20px;
-}
-
-
-h1 span {
-
-    color: #66e3c4;
-}
-
-
-.subtitle {
-
-    color: #aab5c8;
-
-    font-size: 18px;
-
-    max-width: 750px;
-
-    margin-bottom: 55px;
-}
-
-
-/* =========================
-   SKILLS GRID
-========================= */
-
-.skills-grid {
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(3, 1fr);
-
-    gap: 25px;
-}
-
-
-.skill-card {
-
-    background:
-        rgba(18, 26, 45, 0.85);
-
-    border: 1px solid #26324a;
-
-    border-radius: 18px;
-
-    padding: 30px;
-
-    min-height: 240px;
-
-    transition: 0.3s;
-}
-
-
-.skill-card:hover {
-
-    transform: translateY(-7px);
-
-    border-color: #66e3c4;
-
-    box-shadow:
-        0 15px 40px
-        rgba(0,0,0,0.25);
-}
-
-
-.skill-icon {
-
-    width: 55px;
-
-    height: 55px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    border-radius: 14px;
-
-    background:
-        linear-gradient(
-            135deg,
-            #7aa7ff,
-            #66e3c4
-        );
-
-    color: #071411;
-
-    font-size: 22px;
-
-    font-weight: bold;
-
-    margin-bottom: 20px;
-}
-
-
-.skill-card h2 {
-
-    font-size: 22px;
-
-    margin-bottom: 10px;
-}
-
-
-.skill-card p {
-
-    color: #aab5c8;
-
-    margin-bottom: 20px;
-}
-
-
-/* =========================
-   TAGS
-========================= */
-
-.tags {
-
-    display: flex;
-
-    flex-wrap: wrap;
-
-    gap: 8px;
-}
-
-
-.tags span {
-
-    padding: 6px 11px;
-
-    border-radius: 20px;
-
-    background: #1b2740;
-
-    color: #d5ddec;
-
-    font-size: 13px;
-}
-
-
-/* =========================
-   SOFTWARE SECTION
-========================= */
-
-.software {
-
-    margin-top: 60px;
-
-    padding: 35px;
-
-    border: 1px solid #26324a;
-
-    border-radius: 20px;
-
-    background:
-        linear-gradient(
-            135deg,
-            rgba(102,227,196,0.07),
-            rgba(122,167,255,0.07)
-        );
-}
-
-
-.software h2 {
-
-    margin-bottom: 20px;
-}
-
-
-.software-tags {
-
-    display: flex;
-
-    flex-wrap: wrap;
-
-    gap: 12px;
-}
-
-
-.software-tags span {
-
-    padding: 10px 16px;
-
-    border: 1px solid #35435e;
-
-    border-radius: 25px;
-
-    color: #d5ddec;
-
-    background: #10192c;
-}
-
-
-/* =========================
-   FOOTER
-========================= */
-
-footer {
-
-    border-top: 1px solid #26324a;
-
-    padding: 30px;
-
-    text-align: center;
-
-    color: #7f8ba1;
-}
-
-
-/* =========================
-   MOBILE
-========================= */
-
-@media(max-width: 900px) {
-
-    .skills-grid {
-
-        grid-template-columns: 1fr 1fr;
-    }
-
-}
-
-
-@media(max-width: 600px) {
-
-    .nav-links {
-
-        display: none;
-    }
-
-    .skills-grid {
-
-        grid-template-columns: 1fr;
-    }
-
-    .page {
-
-        padding: 70px 0;
-    }
-
-    h1 {
-
-        font-size: 45px;
-    }
-
-}
-
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Skills | K L Manish</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #07111f;
+            color: #f2f7ff;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        nav {
+            width: 100%;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #07111f;
+            border-bottom: 1px solid #16263b;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #66e3c4;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #c9d5e5;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #66e3c4;
+        }
+
+
+        /* =========================
+           PAGE HEADER
+        ========================= */
+
+        .hero {
+            text-align: center;
+            padding: 80px 8% 50px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 span {
+            color: #66e3c4;
+        }
+
+        .hero p {
+            color: #9eafc4;
+            max-width: 700px;
+            margin: auto;
+            font-size: 17px;
+        }
+
+
+        /* =========================
+           SKILLS
+        ========================= */
+
+        .skills-section {
+            padding: 40px 8% 90px;
+        }
+
+        .skills-container {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .skill-card {
+            background: #0c1a2b;
+            border: 1px solid #1d334d;
+            border-radius: 15px;
+            padding: 30px;
+            transition: 0.3s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+            border-color: #66e3c4;
+        }
+
+        .skill-card h2 {
+            color: #66e3c4;
+            font-size: 22px;
+            margin-bottom: 18px;
+        }
+
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill {
+            background: #13263b;
+            color: #c9d5e5;
+            padding: 8px 13px;
+            border-radius: 7px;
+            font-size: 14px;
+            border: 1px solid #1d334d;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            padding: 25px 8%;
+            text-align: center;
+            border-top: 1px solid #16263b;
+            color: #7f91a8;
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           TABLET
+        ========================= */
+
+        @media (max-width: 850px) {
+
+            .nav-links {
+                gap: 12px;
+            }
+
+            .nav-links a {
+                font-size: 13px;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 600px) {
+
+            nav {
+                padding: 15px 5%;
+            }
+
+            .logo {
+                font-size: 20px;
+            }
+
+            .nav-links {
+                gap: 8px;
+            }
+
+            .nav-links a {
+                font-size: 11px;
+            }
+
+            .hero {
+                padding-left: 5%;
+                padding-right: 5%;
+            }
+
+            .skills-section {
+                padding-left: 5%;
+                padding-right: 5%;
+            }
+
+        }
+
+    </style>
 
 </head>
 
@@ -427,319 +229,258 @@ footer {
 <body>
 
 
-<!-- =========================
-     NAVIGATION
-========================= -->
+    <!-- =========================
+         NAVBAR
+    ========================= -->
 
-<header>
+    <nav>
 
-<nav class="navbar">
+        <div class="logo">
+            KLM
+        </div>
 
+        <ul class="nav-links">
 
-<div class="logo">
+            <li>
+                <a href="index.html">Home</a>
+            </li>
 
-K L Manish<span>.</span>
+            <li>
+                <a href="about.html">About</a>
+            </li>
 
-</div>
+            <li>
+                <a href="skills.html">Skills</a>
+            </li>
 
+            <li>
+                <a href="projects.html">Projects</a>
+            </li>
 
-<ul class="nav-links">
+            <li>
+                <a href="education.html">Education</a>
+            </li>
 
-<li>
-<a href="index.html">Home</a>
-</li>
+            <li>
+                <a href="contact.html">Contact</a>
+            </li>
 
-<li>
-<a href="about.html">About</a>
-</li>
+        </ul>
 
-<li>
-<a href="skills.html">Skills</a>
-</li>
+    </nav>
 
-<li>
-<a href="projects.html">Projects</a>
-</li>
 
-<li>
-<a href="education.html">Education</a>
-</li>
 
-<li>
-<a href="contact.html">Contact</a>
-</li>
+    <!-- =========================
+         PAGE HEADER
+    ========================= -->
 
-</ul>
+    <section class="hero">
 
-</nav>
+        <h1>
+            My <span>Skills</span>
+        </h1>
 
-</header>
+        <p>
+            Technical and analytical skills developed through
+            coursework, projects and practical data analysis.
+        </p>
 
+    </section>
 
 
-<!-- =========================
-     SKILLS
-========================= -->
 
-<section class="page">
+    <!-- =========================
+         SKILLS SECTION
+    ========================= -->
 
-<div class="container">
+    <section class="skills-section">
 
+        <div class="skills-container">
 
-<p class="small-title">
-TECHNICAL SKILLS
-</p>
+            <div class="skills-grid">
 
 
-<h1>
+                <!-- PYTHON & DATA -->
 
-My
-<span>Skills.</span>
+                <div class="skill-card">
 
-</h1>
+                    <h2>
+                        Python & Data
+                    </h2>
 
+                    <div class="skill-list">
 
-<p class="subtitle">
+                        <span class="skill">Python</span>
+                        <span class="skill">Pandas</span>
+                        <span class="skill">NumPy</span>
+                        <span class="skill">Matplotlib</span>
 
-A combination of economics, statistics,
-programming and data analytics skills that
-I use for academic and research projects.
+                    </div>
 
-</p>
+                </div>
 
 
+                <!-- SQL -->
 
-<div class="skills-grid">
+                <div class="skill-card">
 
+                    <h2>
+                        SQL & Database
+                    </h2>
 
-<!-- PYTHON -->
+                    <div class="skill-list">
 
-<div class="skill-card">
+                        <span class="skill">SQL</span>
+                        <span class="skill">MySQL</span>
+                        <span class="skill">Queries</span>
+                        <span class="skill">Database</span>
 
-<div class="skill-icon">
-PY
-</div>
+                    </div>
 
-<h2>
-Python & Data
-</h2>
+                </div>
 
-<p>
-Programming and data manipulation
-for analytical projects.
-</p>
 
-<div class="tags">
+                <!-- ECONOMETRICS -->
 
-<span>Python</span>
-<span>Pandas</span>
-<span>NumPy</span>
-<span>Matplotlib</span>
+                <div class="skill-card">
 
-</div>
+                    <h2>
+                        Econometrics
+                    </h2>
 
-</div>
+                    <div class="skill-list">
 
+                        <span class="skill">OLS</span>
+                        <span class="skill">Logit</span>
+                        <span class="skill">Probit</span>
+                        <span class="skill">2SLS</span>
 
+                    </div>
 
-<!-- SQL -->
+                </div>
 
-<div class="skill-card">
 
-<div class="skill-icon">
-SQL
-</div>
+                <!-- TIME SERIES -->
 
-<h2>
-SQL & Database
-</h2>
+                <div class="skill-card">
 
-<p>
-Working with databases and extracting
-useful information from structured data.
-</p>
+                    <h2>
+                        Time Series
+                    </h2>
 
-<div class="tags">
+                    <div class="skill-list">
 
-<span>SQL</span>
-<span>MySQL</span>
-<span>Queries</span>
-<span>Database</span>
+                        <span class="skill">AR</span>
+                        <span class="skill">VAR</span>
+                        <span class="skill">VEC</span>
+                        <span class="skill">GARCH</span>
 
-</div>
+                    </div>
 
-</div>
+                </div>
 
 
+                <!-- DATA ANALYTICS -->
 
-<!-- ECONOMETRICS -->
+                <div class="skill-card">
 
-<div class="skill-card">
+                    <h2>
+                        Data Analytics
+                    </h2>
 
-<div class="skill-icon">
-EC
-</div>
+                    <div class="skill-list">
 
-<h2>
-Econometrics
-</h2>
+                        <span class="skill">Data Cleaning</span>
+                        <span class="skill">EDA</span>
+                        <span class="skill">Visualization</span>
+                        <span class="skill">Forecasting</span>
 
-<p>
-Applying statistical methods to
-economic and real-world datasets.
-</p>
+                    </div>
 
-<div class="tags">
+                </div>
 
-<span>OLS</span>
-<span>Logit</span>
-<span>Probit</span>
-<span>2SLS</span>
 
-</div>
+                <!-- BUSINESS INTELLIGENCE -->
 
-</div>
+                <div class="skill-card">
 
+                    <h2>
+                        Business Intelligence & Visualization
+                    </h2>
 
+                    <div class="skill-list">
 
-<!-- TIME SERIES -->
+                        <span class="skill">Power BI</span>
+                        <span class="skill">Tableau</span>
+                        <span class="skill">Dashboards</span>
+                        <span class="skill">Data Visualization</span>
 
-<div class="skill-card">
+                    </div>
 
-<div class="skill-icon">
-TS
-</div>
+                </div>
 
-<h2>
-Time Series
-</h2>
 
-<p>
-Understanding trends, patterns and
-forecasting in economic data.
-</p>
+                <!-- RESEARCH -->
 
-<div class="tags">
+                <div class="skill-card">
 
-<span>AR</span>
-<span>VAR</span>
-<span>VEC</span>
-<span>GARCH</span>
+                    <h2>
+                        Research & Analysis
+                    </h2>
 
-</div>
+                    <div class="skill-list">
 
-</div>
+                        <span class="skill">Research</span>
+                        <span class="skill">Data Analysis</span>
+                        <span class="skill">Interpretation</span>
+                        <span class="skill">Report Writing</span>
 
+                    </div>
 
+                </div>
 
-<!-- DATA ANALYTICS -->
 
-<div class="skill-card">
+                <!-- TOOLS -->
 
-<div class="skill-icon">
-DA
-</div>
+                <div class="skill-card">
 
-<h2>
-Data Analytics
-</h2>
+                    <h2>
+                        Tools & Software
+                    </h2>
 
-<p>
-Cleaning, transforming and exploring
-data to generate meaningful insights.
-</p>
+                    <div class="skill-list">
 
-<div class="tags">
+                        <span class="skill">R</span>
+                        <span class="skill">Excel</span>
+                        <span class="skill">Stata</span>
+                        <span class="skill">Gretl</span>
+                        <span class="skill">Google Colab</span>
+                        <span class="skill">Jupyter Notebook</span>
+                        <span class="skill">GitHub</span>
 
-<span>Data Cleaning</span>
-<span>EDA</span>
-<span>Visualization</span>
-<span>Forecasting</span>
+                    </div>
 
-</div>
+                </div>
 
-</div>
 
+            </div>
 
+        </div>
 
-<!-- RESEARCH -->
+    </section>
 
-<div class="skill-card">
 
-<div class="skill-icon">
-RS
-</div>
 
-<h2>
-Research
-</h2>
+    <!-- =========================
+         FOOTER
+    ========================= -->
 
-<p>
-Economic research, data interpretation
-and evidence-based analysis.
-</p>
+    <footer>
 
-<div class="tags">
+        © 2026 K L Manish | Economics & Data Analytics
 
-<span>Research</span>
-<span>Analysis</span>
-<span>Interpretation</span>
-<span>Reports</span>
-
-</div>
-
-</div>
-
-
-</div>
-
-
-
-<!-- SOFTWARE -->
-
-<div class="software">
-
-<h2>
-Tools & Software
-</h2>
-
-
-<div class="software-tags">
-
-<span>Python</span>
-
-<span>R</span>
-
-<span>Excel</span>
-
-<span>Stata</span>
-
-<span>Gretl</span>
-
-<span>MySQL</span>
-
-<span>Google Colab</span>
-
-<span>Jupyter Notebook</span>
-
-<span>GitHub</span>
-
-</div>
-
-</div>
-
-
-</div>
-
-</section>
-
-
-
-<footer>
-
-© 2026 K L Manish • Data Analytics Portfolio
-
-</footer>
+    </footer>
 
 
 </body>
