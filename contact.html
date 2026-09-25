@@ -3,416 +3,258 @@
 
 <head>
 
-<meta charset="UTF-8">
-
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
-
-<title>Contact | K L Manish</title>
-
-<style>
-
-/* =========================
-   BASIC SETTINGS
-========================= */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-
-    font-family: Arial, Helvetica, sans-serif;
-
-    background:
-        radial-gradient(
-            circle at 10% 10%,
-            rgba(102, 227, 196, 0.12),
-            transparent 30%
-        ),
-        radial-gradient(
-            circle at 90% 20%,
-            rgba(122, 167, 255, 0.12),
-            transparent 30%
-        ),
-        #080d1a;
-
-    color: #f5f7fb;
-
-    line-height: 1.6;
-}
-
-
-/* =========================
-   NAVBAR
-========================= */
-
-header {
-
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-
-    background: rgba(8, 13, 26, 0.92);
-
-    backdrop-filter: blur(15px);
-
-    border-bottom: 1px solid #26324a;
-}
-
-
-.navbar {
-
-    width: 90%;
-    max-width: 1150px;
-
-    height: 75px;
-
-    margin: auto;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: space-between;
-}
-
-
-.logo {
-
-    font-size: 26px;
-
-    font-weight: 800;
-
-    color: white;
-}
-
-
-.logo span {
-    color: #66e3c4;
-}
-
-
-.nav-links {
-
-    display: flex;
-
-    gap: 25px;
-
-    list-style: none;
-}
-
-
-.nav-links a {
-
-    color: #aab5c8;
-
-    text-decoration: none;
-
-    font-size: 15px;
-
-    transition: 0.3s;
-}
-
-
-.nav-links a:hover {
-
-    color: #66e3c4;
-}
-
-
-/* =========================
-   MAIN
-========================= */
-
-.container {
-
-    width: 90%;
-
-    max-width: 1000px;
-
-    margin: auto;
-}
-
-
-.page {
-
-    min-height: 85vh;
-
-    display: flex;
-
-    align-items: center;
-
-    padding: 80px 0;
-}
-
-
-.contact-box {
-
-    width: 100%;
-
-    padding: 65px;
-
-    text-align: center;
-
-    background:
-        linear-gradient(
-            145deg,
-            rgba(20, 32, 55, 0.95),
-            rgba(12, 20, 36, 0.95)
-        );
-
-    border: 1px solid #26324a;
-
-    border-radius: 25px;
-
-    box-shadow:
-        0 25px 70px
-        rgba(0,0,0,0.35);
-}
-
-
-.small-title {
-
-    color: #66e3c4;
-
-    font-size: 14px;
-
-    font-weight: bold;
-
-    letter-spacing: 3px;
-
-    margin-bottom: 20px;
-}
-
-
-h1 {
-
-    font-size: clamp(45px, 6vw, 70px);
-
-    line-height: 1.1;
-
-    margin-bottom: 25px;
-}
-
-
-h1 span {
-
-    color: #66e3c4;
-}
-
-
-.intro {
-
-    max-width: 700px;
-
-    margin: auto;
-
-    color: #aab5c8;
-
-    font-size: 18px;
-
-    line-height: 1.8;
-}
-
-
-/* =========================
-   CONTACT CARDS
-========================= */
-
-.contact-grid {
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(3, 1fr);
-
-    gap: 18px;
-
-    margin-top: 45px;
-}
-
-
-.contact-card {
-
-    padding: 25px;
-
-    background: #111a2d;
-
-    border: 1px solid #26324a;
-
-    border-radius: 15px;
-
-    transition: 0.3s;
-}
-
-
-.contact-card:hover {
-
-    transform: translateY(-5px);
-
-    border-color: #66e3c4;
-}
-
-
-.contact-icon {
-
-    width: 50px;
-
-    height: 50px;
-
-    margin: auto auto 15px;
-
-    border-radius: 12px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    background:
-        linear-gradient(
-            135deg,
-            #7aa7ff,
-            #66e3c4
-        );
-
-    color: #071411;
-
-    font-weight: bold;
-}
-
-
-.contact-card h3 {
-
-    margin-bottom: 7px;
-}
-
-
-.contact-card p {
-
-    color: #aab5c8;
-
-    font-size: 14px;
-}
-
-
-/* =========================
-   BUTTONS
-========================= */
-
-.buttons {
-
-    display: flex;
-
-    justify-content: center;
-
-    gap: 15px;
-
-    flex-wrap: wrap;
-
-    margin-top: 40px;
-}
-
-
-.btn {
-
-    display: inline-block;
-
-    padding: 13px 24px;
-
-    border-radius: 10px;
-
-    text-decoration: none;
-
-    font-weight: bold;
-
-    transition: 0.3s;
-}
-
-
-.primary {
-
-    background: #66e3c4;
-
-    color: #06100d;
-}
-
-
-.primary:hover {
-
-    transform: translateY(-3px);
-
-    box-shadow:
-        0 10px 30px
-        rgba(102,227,196,0.2);
-}
-
-
-.secondary {
-
-    border: 1px solid #35435e;
-
-    color: white;
-}
-
-
-.secondary:hover {
-
-    border-color: #66e3c4;
-
-    color: #66e3c4;
-}
-
-
-/* =========================
-   FOOTER
-========================= */
-
-footer {
-
-    border-top: 1px solid #26324a;
-
-    padding: 30px;
-
-    text-align: center;
-
-    color: #7f8ba1;
-}
-
-
-/* =========================
-   MOBILE
-========================= */
-
-@media(max-width: 800px) {
-
-    .nav-links {
-        display: none;
-    }
-
-    .contact-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .contact-box {
-        padding: 40px 25px;
-    }
-
-    .page {
-        padding: 60px 0;
-    }
-
-}
-
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact | K L Manish</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #07111f;
+            color: #f2f7ff;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        nav {
+            width: 100%;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #07111f;
+            border-bottom: 1px solid #16263b;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #66e3c4;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #c9d5e5;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #66e3c4;
+        }
+
+
+        /* =========================
+           PAGE HEADER
+        ========================= */
+
+        .hero {
+            text-align: center;
+            padding: 80px 8% 50px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 span {
+            color: #66e3c4;
+        }
+
+        .hero p {
+            color: #9eafc4;
+            max-width: 650px;
+            margin: auto;
+            font-size: 17px;
+        }
+
+
+        /* =========================
+           CONTACT SECTION
+        ========================= */
+
+        .contact-section {
+            padding: 30px 8% 90px;
+        }
+
+        .contact-container {
+            max-width: 900px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .contact-card {
+            background: #0c1a2b;
+            border: 1px solid #1d334d;
+            border-radius: 15px;
+            padding: 30px;
+            transition: 0.3s;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+            border-color: #66e3c4;
+        }
+
+        .contact-card h3 {
+            color: #66e3c4;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .contact-card p {
+            color: #9eafc4;
+            margin-bottom: 15px;
+            word-break: break-word;
+        }
+
+        .contact-link {
+            color: #66e3c4;
+            font-weight: bold;
+        }
+
+        .contact-link:hover {
+            text-decoration: underline;
+        }
+
+
+        /* =========================
+           SOCIAL LINKS
+        ========================= */
+
+        .social-section {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .social-section h2 {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        .social-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .social-btn {
+            padding: 12px 22px;
+            border: 1px solid #66e3c4;
+            border-radius: 8px;
+            color: #66e3c4;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .social-btn:hover {
+            background: #66e3c4;
+            color: #07111f;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            padding: 25px 8%;
+            text-align: center;
+            border-top: 1px solid #16263b;
+            color: #7f91a8;
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           TABLET
+        ========================= */
+
+        @media (max-width: 850px) {
+
+            .nav-links {
+                gap: 12px;
+            }
+
+            .nav-links a {
+                font-size: 13px;
+            }
+
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 600px) {
+
+            nav {
+                padding: 15px 5%;
+            }
+
+            .logo {
+                font-size: 20px;
+            }
+
+            .nav-links {
+                gap: 8px;
+            }
+
+            .nav-links a {
+                font-size: 11px;
+            }
+
+            .hero {
+                padding-left: 5%;
+                padding-right: 5%;
+            }
+
+            .contact-section {
+                padding-left: 5%;
+                padding-right: 5%;
+            }
+
+        }
+
+    </style>
 
 </head>
 
@@ -420,204 +262,264 @@ footer {
 <body>
 
 
-<!-- =========================
-     NAVIGATION
-========================= -->
+    <!-- =========================
+         NAVBAR
+    ========================= -->
 
-<header>
+    <nav>
 
-<nav class="navbar">
+        <div class="logo">
+            KLM
+        </div>
 
-<div class="logo">
+        <ul class="nav-links">
 
-K L Manish<span>.</span>
+            <li>
+                <a href="index.html">Home</a>
+            </li>
 
-</div>
+            <li>
+                <a href="about.html">About</a>
+            </li>
 
+            <li>
+                <a href="skills.html">Skills</a>
+            </li>
 
-<ul class="nav-links">
+            <li>
+                <a href="projects.html">Projects</a>
+            </li>
 
-<li>
-<a href="index.html">Home</a>
-</li>
+            <li>
+                <a href="education.html">Education</a>
+            </li>
 
-<li>
-<a href="about.html">About</a>
-</li>
+            <li>
+                <a href="contact.html">Contact</a>
+            </li>
 
-<li>
-<a href="skills.html">Skills</a>
-</li>
+        </ul>
 
-<li>
-<a href="projects.html">Projects</a>
-</li>
+    </nav>
 
-<li>
-<a href="education.html">Education</a>
-</li>
 
-<li>
-<a href="contact.html">Contact</a>
-</li>
 
-</ul>
+    <!-- =========================
+         PAGE HEADER
+    ========================= -->
 
-</nav>
+    <section class="hero">
 
-</header>
+        <h1>
+            Get In <span>Touch</span>
+        </h1>
 
+        <p>
+            Feel free to reach out to me for opportunities,
+            collaborations, projects or professional discussions.
+        </p>
 
+    </section>
 
-<!-- =========================
-     CONTACT
-========================= -->
 
-<section class="page">
 
-<div class="container">
+    <!-- =========================
+         CONTACT INFORMATION
+    ========================= -->
 
-<div class="contact-box">
+    <section class="contact-section">
 
+        <div class="contact-container">
 
-<p class="small-title">
-GET IN TOUCH
-</p>
 
+            <!-- EMAIL -->
 
-<h1>
+            <div class="contact-card">
 
-Let's
-<span>Connect.</span>
+                <h3>
+                    Email
+                </h3>
 
-</h1>
+                <p>
+                    klmanish2005@gmail.com
+                </p>
 
+                <a
+                    href="mailto:klmanish2005@gmail.com"
+                    class="contact-link"
+                >
+                    Send me an email →
+                </a>
 
-<p class="intro">
+            </div>
 
-I am open to opportunities, internships,
-data analytics projects, research collaborations
-and professional conversations.
 
-Feel free to reach out through any of the
-platforms below.
+            <!-- PHONE -->
 
-</p>
+            <div class="contact-card">
 
+                <h3>
+                    Phone
+                </h3>
 
+                <p>
+                    +91 9880153960
+                </p>
 
-<!-- CONTACT CARDS -->
+                <a
+                    href="tel:+919880153960"
+                    class="contact-link"
+                >
+                    Call me →
+                </a>
 
-<div class="contact-grid">
+            </div>
 
 
-<div class="contact-card">
+            <!-- LOCATION -->
 
-<div class="contact-icon">
-@
-</div>
+            <div class="contact-card">
 
-<h3>
-Email
-</h3>
+                <h3>
+                    Location
+                </h3>
 
-<p>
-YOUR-EMAIL@gmail.com
-</p>
+                <p>
+                    Currently based in Pune, Maharashtra, India
+                </p>
 
-</div>
+            </div>
 
 
+            <!-- GITHUB -->
 
-<div class="contact-card">
+            <div class="contact-card">
 
-<div class="contact-icon">
-GH
-</div>
+                <h3>
+                    GitHub
+                </h3>
 
-<h3>
-GitHub
-</h3>
+                <p>
+                    github.com/klmanish240305
+                </p>
 
-<p>
-github.com/YOUR-USERNAME
-</p>
+                <a
+                    href="https://github.com/klmanish240305"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="contact-link"
+                >
+                    Visit my GitHub →
+                </a>
 
-</div>
+            </div>
 
 
+            <!-- LINKEDIN -->
 
-<div class="contact-card">
+            <div class="contact-card">
 
-<div class="contact-icon">
-in
-</div>
+                <h3>
+                    LinkedIn
+                </h3>
 
-<h3>
-LinkedIn
-</h3>
+                <p>
+                    linkedin.com/in/k-l-manish-9b29602b8
+                </p>
 
-<p>
-linkedin.com/in/YOUR-PROFILE
-</p>
+                <a
+                    href="https://www.linkedin.com/in/k-l-manish-9b29602b8/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="contact-link"
+                >
+                    Connect with me →
+                </a>
 
-</div>
+            </div>
 
 
-</div>
+            <!-- RESUME -->
 
+            <div class="contact-card">
 
+                <h3>
+                    Resume
+                </h3>
 
-<!-- BUTTONS -->
+                <p>
+                    View or download my resume.
+                </p>
 
-<div class="buttons">
+                <a
+                    href="assets/resume.pdf"
+                    target="_blank"
+                    class="contact-link"
+                >
+                    View Resume →
+                </a>
 
+            </div>
 
-<a
-href="mailto:YOUR-EMAIL@gmail.com"
-class="btn primary">
 
-Email Me
+        </div>
 
-</a>
 
 
-<a
-href="https://github.com/"
-target="_blank"
-class="btn secondary">
+        <!-- =========================
+             SOCIAL BUTTONS
+        ========================= -->
 
-GitHub
+        <div class="social-section">
 
-</a>
+            <h2>
+                Connect With Me
+            </h2>
 
+            <div class="social-buttons">
 
-<a
-href="https://www.linkedin.com/"
-target="_blank"
-class="btn secondary">
+                <a
+                    href="https://github.com/klmanish240305"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="social-btn"
+                >
+                    GitHub
+                </a>
 
-LinkedIn
+                <a
+                    href="https://www.linkedin.com/in/k-l-manish-9b29602b8/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="social-btn"
+                >
+                    LinkedIn
+                </a>
 
-</a>
+                <a
+                    href="mailto:klmanish2005@gmail.com"
+                    class="social-btn"
+                >
+                    Email Me
+                </a>
 
+            </div>
 
-</div>
+        </div>
 
+    </section>
 
-</div>
 
-</div>
 
-</section>
+    <!-- =========================
+         FOOTER
+    ========================= -->
 
+    <footer>
 
+        © 2026 K L Manish | Economics & Data Analytics
 
-<footer>
-
-© 2026 K L Manish • Data Analytics Portfolio
-
-</footer>
+    </footer>
 
 
 </body>
