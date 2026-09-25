@@ -1,555 +1,599 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Projects | K L Manish</title>
+  <title>Projects | K L Manish</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
 
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #07111f;
-            color: #f2f7ff;
-            line-height: 1.6;
-        }
+    body {
+      background: #07111f;
+      color: #f2f7ff;
+      line-height: 1.6;
+      transition: 0.3s ease;
+    }
 
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
+    /* NAVBAR */
+    nav {
+      width: 100%;
+      padding: 16px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #07111f;
+      border-bottom: 1px solid #1b2a3d;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      transition: 0.3s ease;
+    }
 
-        nav {
-            width: 100%;
-            padding: 20px 8%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: #07111f;
-            border-bottom: 1px solid #16263b;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 20px;
+      font-weight: bold;
+      color: #66e3c4;
+    }
 
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-            color: #66e3c4;
-        }
+    .logo img {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #66e3c4;
+    }
 
-        .nav-links {
-            display: flex;
-            gap: 25px;
-            list-style: none;
-        }
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
 
-        .nav-links a {
-            color: #c9d5e5;
-            font-size: 15px;
-            transition: 0.3s;
-        }
+    .nav-links {
+      display: flex;
+      gap: 22px;
+      align-items: center;
+    }
 
-        .nav-links a:hover {
-            color: #66e3c4;
-        }
+    .nav-links a {
+      text-decoration: none;
+      color: #f2f7ff;
+      font-size: 14px;
+      transition: 0.3s;
+    }
 
-        .hero {
-            text-align: center;
-            padding: 80px 8% 50px;
-        }
+    .nav-links a:hover {
+      color: #66e3c4;
+    }
 
-        .hero h1 {
-            font-size: 48px;
-            margin-bottom: 15px;
-        }
+    .nav-links .active {
+      color: #66e3c4;
+    }
 
-        .hero h1 span {
-            color: #66e3c4;
-        }
+    /* THEME BUTTON */
+    #themeToggle {
+      border: none;
+      background: #102238;
+      color: #ffffff;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 18px;
+      transition: 0.3s;
+    }
 
-        .hero p {
-            color: #9eafc4;
-            max-width: 700px;
-            margin: auto;
-            font-size: 17px;
-        }
+    #themeToggle:hover {
+      transform: scale(1.08);
+    }
 
-        .projects-section {
-            padding: 40px 8% 90px;
-        }
+    /* MAIN */
+    .container {
+      width: 86%;
+      max-width: 1150px;
+      margin: auto;
+      padding: 80px 0;
+    }
 
-        .projects-container {
-            max-width: 1200px;
-            margin: auto;
-        }
+    .page-title {
+      text-align: center;
+      margin-bottom: 55px;
+    }
 
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 25px;
-        }
+    .page-title h1 {
+      font-size: 44px;
+      margin-bottom: 12px;
+    }
 
-        .project-card {
-            background: #0c1a2b;
-            border: 1px solid #1d334d;
-            border-radius: 16px;
-            padding: 30px;
-            transition: 0.3s;
-            display: flex;
-            flex-direction: column;
-        }
+    .page-title span {
+      color: #66e3c4;
+    }
 
-        .project-card:hover {
-            transform: translateY(-6px);
-            border-color: #66e3c4;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
-        }
+    .page-title p {
+      color: #a9b7c8;
+      font-size: 16px;
+    }
 
-        .project-number {
-            color: #66e3c4;
-            font-size: 14px;
-            font-weight: bold;
-            margin-bottom: 15px;
-        }
+    /* PROJECT GRID */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+    }
 
-        .project-card h2 {
-            font-size: 24px;
-            margin-bottom: 12px;
-        }
+    .project-card {
+      background: #0c1a2b;
+      border: 1px solid #1b2a3d;
+      border-radius: 18px;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      transition: 0.3s ease;
+    }
 
-        .project-card p {
-            color: #9eafc4;
-            margin-bottom: 20px;
-            flex-grow: 1;
-        }
+    .project-card:hover {
+      transform: translateY(-7px);
+      border-color: #66e3c4;
+    }
 
-        .tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-bottom: 25px;
-        }
+    .project-number {
+      color: #66e3c4;
+      font-size: 14px;
+      font-weight: bold;
+      margin-bottom: 12px;
+    }
 
-        .tag {
-            background: #13263b;
-            color: #66e3c4;
-            padding: 6px 10px;
-            border-radius: 6px;
-            font-size: 12px;
-        }
+    .project-card h2 {
+      font-size: 22px;
+      margin-bottom: 14px;
+    }
 
-        .project-btn {
-            display: inline-block;
-            background: #66e3c4;
-            color: #07111f;
-            padding: 11px 18px;
-            border-radius: 7px;
-            font-weight: bold;
-            text-align: center;
-            transition: 0.3s;
-        }
+    .project-card p {
+      color: #b9c6d5;
+      font-size: 15px;
+      margin-bottom: 20px;
+      flex-grow: 1;
+    }
 
-        .project-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(102, 227, 196, 0.2);
-        }
+    /* TAGS */
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 22px;
+    }
 
-        .github-section {
-            text-align: center;
-            margin-top: 60px;
-            padding: 50px 30px;
-            background: #091525;
-            border-radius: 15px;
-        }
+    .tag {
+      background: #102238;
+      border: 1px solid #243a52;
+      color: #dce8f5;
+      padding: 6px 10px;
+      border-radius: 15px;
+      font-size: 12px;
+    }
 
-        .github-section h2 {
-            margin-bottom: 12px;
-        }
+    /* BUTTON */
+    .github-btn {
+      display: inline-block;
+      width: fit-content;
+      padding: 10px 18px;
+      border-radius: 8px;
+      background: #66e3c4;
+      color: #07111f;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 14px;
+      transition: 0.3s ease;
+    }
 
-        .github-section p {
-            color: #9eafc4;
-            margin-bottom: 22px;
-        }
+    .github-btn:hover {
+      transform: translateY(-2px);
+      opacity: 0.9;
+    }
 
-        .github-btn {
-            display: inline-block;
-            border: 1px solid #66e3c4;
-            color: #66e3c4;
-            padding: 12px 22px;
-            border-radius: 8px;
-            font-weight: bold;
-            transition: 0.3s;
-        }
+    /* FEATURED PROJECT */
+    .featured {
+      grid-column: span 2;
+    }
 
-        .github-btn:hover {
-            background: #66e3c4;
-            color: #07111f;
-        }
+    .featured h2 {
+      font-size: 25px;
+    }
 
-        footer {
-            padding: 25px 8%;
-            text-align: center;
-            border-top: 1px solid #16263b;
-            color: #7f91a8;
-            font-size: 14px;
-        }
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 25px;
+      margin-top: 30px;
+      border-top: 1px solid #1b2a3d;
+      color: #8f9dad;
+      font-size: 14px;
+    }
 
-        @media (max-width: 850px) {
+    /* LIGHT MODE */
+    body.light-mode {
+      background: #f4f7fb;
+      color: #172033;
+    }
 
-            .nav-links {
-                gap: 12px;
-            }
+    body.light-mode nav {
+      background: #ffffff;
+      border-bottom: 1px solid #dfe5ec;
+    }
 
-            .nav-links a {
-                font-size: 13px;
-            }
+    body.light-mode .nav-links a {
+      color: #172033;
+    }
 
-            .projects-grid {
-                grid-template-columns: 1fr;
-            }
+    body.light-mode .nav-links a:hover,
+    body.light-mode .nav-links .active {
+      color: #159f82;
+    }
 
-            .hero h1 {
-                font-size: 40px;
-            }
-        }
+    body.light-mode .logo {
+      color: #159f82;
+    }
 
-        @media (max-width: 600px) {
+    body.light-mode .logo img {
+      border-color: #159f82;
+    }
 
-            nav {
-                padding: 15px 5%;
-            }
+    body.light-mode #themeToggle {
+      background: #e7edf3;
+      color: #172033;
+    }
 
-            .logo {
-                font-size: 20px;
-            }
+    body.light-mode .page-title p {
+      color: #657083;
+    }
 
-            .nav-links {
-                gap: 8px;
-            }
+    body.light-mode .project-card {
+      background: #ffffff;
+      border-color: #dfe5ec;
+    }
 
-            .nav-links a {
-                font-size: 11px;
-            }
+    body.light-mode .project-card:hover {
+      border-color: #159f82;
+    }
 
-            .projects-section {
-                padding-left: 5%;
-                padding-right: 5%;
-            }
+    body.light-mode .project-number {
+      color: #159f82;
+    }
 
-            .hero {
-                padding-left: 5%;
-                padding-right: 5%;
-            }
-        }
-    </style>
+    body.light-mode .project-card p {
+      color: #536174;
+    }
+
+    body.light-mode .tag {
+      background: #eef3f7;
+      border-color: #d8e0e8;
+      color: #344054;
+    }
+
+    body.light-mode .github-btn {
+      background: #159f82;
+      color: #ffffff;
+    }
+
+    body.light-mode footer {
+      border-color: #dfe5ec;
+      color: #657083;
+    }
+
+    /* MOBILE */
+    @media (max-width: 800px) {
+
+      nav {
+        padding: 14px 5%;
+      }
+
+      .nav-right {
+        gap: 12px;
+      }
+
+      .nav-links {
+        gap: 10px;
+      }
+
+      .nav-links a {
+        font-size: 12px;
+      }
+
+      .logo span {
+        display: none;
+      }
+
+      .logo img {
+        width: 38px;
+        height: 38px;
+      }
+
+      .container {
+        width: 90%;
+        padding: 55px 0;
+      }
+
+      .page-title h1 {
+        font-size: 34px;
+      }
+
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .featured {
+        grid-column: span 1;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-    <!-- NAVBAR -->
+  <!-- NAVBAR -->
+  <nav>
 
-    <nav>
+    <div class="logo">
+      <img src="assets/profile.jpg" alt="K L Manish">
+      <span>K L Manish</span>
+    </div>
 
-        <div class="logo">
-            KLM
+    <div class="nav-right">
+
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="projects.html" class="active">Projects</a>
+        <a href="education.html">Education</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <button id="themeToggle" onclick="toggleTheme()">☀️</button>
+
+    </div>
+
+  </nav>
+
+
+  <!-- MAIN -->
+  <main class="container">
+
+    <div class="page-title">
+      <h1>My <span>Projects</span></h1>
+      <p>Data analytics, visualization and economic research projects</p>
+    </div>
+
+
+    <section class="projects-grid">
+
+
+      <!-- PROJECT 1 -->
+      <div class="project-card featured">
+
+        <div class="project-number">
+          PROJECT 01
         </div>
 
-        <ul class="nav-links">
-
-            <li>
-                <a href="index.html">Home</a>
-            </li>
-
-            <li>
-                <a href="about.html">About</a>
-            </li>
-
-            <li>
-                <a href="skills.html">Skills</a>
-            </li>
-
-            <li>
-                <a href="projects.html">Projects</a>
-            </li>
-
-            <li>
-                <a href="education.html">Education</a>
-            </li>
-
-            <li>
-                <a href="contact.html">Contact</a>
-            </li>
-
-        </ul>
-
-    </nav>
-
-
-    <!-- PAGE INTRO -->
-
-    <section class="hero">
-
-        <h1>
-            My <span>Projects</span>
-        </h1>
+        <h2>Orange Data Mining Project</h2>
 
         <p>
-            A collection of my data analytics, visualization,
-            economics and research projects using Python, R,
-            Power BI and Orange Data Mining.
+          A data mining project using Orange Data Mining to explore datasets,
+          perform data analysis and apply machine learning and visualization
+          techniques to generate meaningful insights.
         </p>
 
-    </section>
-
-
-    <!-- PROJECTS -->
-
-    <section class="projects-section">
-
-        <div class="projects-container">
-
-            <div class="projects-grid">
-
-
-                <!-- PROJECT 1 -->
-
-                <div class="project-card">
-
-                    <div class="project-number">
-                        PROJECT 01
-                    </div>
-
-                    <h2>
-                        Orange Data Mining Project
-                    </h2>
-
-                    <p>
-                        A data mining project developed using
-                        Orange Data Mining, focusing on data
-                        analysis, visualization and machine
-                        learning workflow.
-                    </p>
-
-                    <div class="tags">
-
-                        <span class="tag">Orange</span>
-                        <span class="tag">Data Mining</span>
-                        <span class="tag">Visualization</span>
-                        <span class="tag">Analytics</span>
-
-                    </div>
-
-                    <a
-                        href="https://github.com/klmanish240305/orange-data-mining-project"
-                        target="_blank"
-                        class="project-btn"
-                    >
-                        View Project →
-                    </a>
-
-                </div>
-
-
-                <!-- PROJECT 2 -->
-
-                <div class="project-card">
-
-                    <div class="project-number">
-                        PROJECT 02
-                    </div>
-
-                    <h2>
-                        Apollo Hyderabad Healthcare Dashboard
-                    </h2>
-
-                    <p>
-                        A healthcare data dashboard focused on
-                        analyzing and presenting healthcare
-                        information through interactive
-                        visualizations and insights.
-                    </p>
-
-                    <div class="tags">
-
-                        <span class="tag">Power BI</span>
-                        <span class="tag">Healthcare</span>
-                        <span class="tag">Dashboard</span>
-                        <span class="tag">Data Visualization</span>
-
-                    </div>
-
-                    <a
-                        href="https://github.com/klmanish240305/apollo-Hyderabad-healthcare-dashboard"
-                        target="_blank"
-                        class="project-btn"
-                    >
-                        View Project →
-                    </a>
-
-                </div>
-
-
-                <!-- PROJECT 3 -->
-
-                <div class="project-card">
-
-                    <div class="project-number">
-                        PROJECT 03
-                    </div>
-
-                    <h2>
-                        YouTube Dashboard – Power BI
-                    </h2>
-
-                    <p>
-                        An interactive Power BI dashboard for
-                        analyzing YouTube-related data and
-                        presenting key metrics through
-                        visual analytics.
-                    </p>
-
-                    <div class="tags">
-
-                        <span class="tag">Power BI</span>
-                        <span class="tag">YouTube</span>
-                        <span class="tag">Dashboard</span>
-                        <span class="tag">Analytics</span>
-
-                    </div>
-
-                    <a
-                        href="https://github.com/klmanish240305/youtube-dashboard-powerbi"
-                        target="_blank"
-                        class="project-btn"
-                    >
-                        View Project →
-                    </a>
-
-                </div>
-
-
-                <!-- PROJECT 4 -->
-
-                <div class="project-card">
-
-                    <div class="project-number">
-                        PROJECT 04
-                    </div>
-
-                    <h2>
-                        Indian EV Market Analysis
-                    </h2>
-
-                    <p>
-                        A Python-based analysis of the Indian
-                        electric vehicle market, focusing on
-                        trends, patterns and data-driven insights
-                        related to EV adoption.
-                    </p>
-
-                    <div class="tags">
-
-                        <span class="tag">Python</span>
-                        <span class="tag">Pandas</span>
-                        <span class="tag">EDA</span>
-                        <span class="tag">EV Market</span>
-
-                    </div>
-
-                    <a
-                        href="https://github.com/klmanish240305/indian-ev-market-analysis-python"
-                        target="_blank"
-                        class="project-btn"
-                    >
-                        View Project →
-                    </a>
-
-                </div>
-
-
-                <!-- PROJECT 5 -->
-
-                <div class="project-card">
-
-                    <div class="project-number">
-                        PROJECT 05
-                    </div>
-
-                    <h2>
-                        Tata Motors Stock Analysis
-                    </h2>
-
-                    <p>
-                        An R-based stock market analysis project
-                        examining Tata Motors stock data using
-                        statistical analysis and visualization.
-                    </p>
-
-                    <div class="tags">
-
-                        <span class="tag">R</span>
-                        <span class="tag">Stock Analysis</span>
-                        <span class="tag">Statistics</span>
-                        <span class="tag">Visualization</span>
-
-                    </div>
-
-                    <a
-                        href="https://github.com/klmanish240305/tata-motors-stock-analysis-r"
-                        target="_blank"
-                        class="project-btn"
-                    >
-                        View Project →
-                    </a>
-
-                </div>
-
-
-            </div>
-
-
-            <!-- GITHUB -->
-
-            <div class="github-section">
-
-                <h2>
-                    More Projects on GitHub
-                </h2>
-
-                <p>
-                    Explore my complete collection of projects,
-                    code and data analysis work.
-                </p>
-
-                <a
-                    href="https://github.com/klmanish240305"
-                    target="_blank"
-                    class="github-btn"
-                >
-                    Visit My GitHub →
-                </a>
-
-            </div>
-
+        <div class="tags">
+          <span class="tag">Orange Data Mining</span>
+          <span class="tag">Data Analysis</span>
+          <span class="tag">Machine Learning</span>
+          <span class="tag">Visualization</span>
         </div>
 
+        <a
+          href="https://github.com/klmanish240305/orange-data-mining-project"
+          target="_blank"
+          class="github-btn">
+          View on GitHub →
+        </a>
+
+      </div>
+
+
+      <!-- PROJECT 2 -->
+      <div class="project-card">
+
+        <div class="project-number">
+          PROJECT 02
+        </div>
+
+        <h2>Apollo Hyderabad Healthcare Dashboard</h2>
+
+        <p>
+          An interactive healthcare dashboard analysing healthcare-related
+          data and presenting key metrics, trends and insights through
+          dashboard visualizations.
+        </p>
+
+        <div class="tags">
+          <span class="tag">Power BI</span>
+          <span class="tag">Healthcare</span>
+          <span class="tag">Dashboard</span>
+          <span class="tag">Data Visualization</span>
+        </div>
+
+        <a
+          href="https://github.com/klmanish240305/apollo-Hyderabad-healthcare-dashboard"
+          target="_blank"
+          class="github-btn">
+          View on GitHub →
+        </a>
+
+      </div>
+
+
+      <!-- PROJECT 3 -->
+      <div class="project-card">
+
+        <div class="project-number">
+          PROJECT 03
+        </div>
+
+        <h2>YouTube Dashboard – Power BI</h2>
+
+        <p>
+          A Power BI dashboard designed to analyse YouTube data, understand
+          channel and video performance, and present important metrics using
+          interactive visualizations.
+        </p>
+
+        <div class="tags">
+          <span class="tag">Power BI</span>
+          <span class="tag">YouTube Data</span>
+          <span class="tag">Dashboard</span>
+          <span class="tag">Analytics</span>
+        </div>
+
+        <a
+          href="https://github.com/klmanish240305/youtube-dashboard-powerbi"
+          target="_blank"
+          class="github-btn">
+          View on GitHub →
+        </a>
+
+      </div>
+
+
+      <!-- PROJECT 4 -->
+      <div class="project-card">
+
+        <div class="project-number">
+          PROJECT 04
+        </div>
+
+        <h2>Indian EV Market Analysis</h2>
+
+        <p>
+          An analysis of the Indian electric vehicle market using Python to
+          study EV adoption trends, market developments and data-driven
+          insights related to India's transition towards electric mobility.
+        </p>
+
+        <div class="tags">
+          <span class="tag">Python</span>
+          <span class="tag">Pandas</span>
+          <span class="tag">EDA</span>
+          <span class="tag">EV Market</span>
+          <span class="tag">Visualization</span>
+        </div>
+
+        <a
+          href="https://github.com/klmanish240305/indian-ev-market-analysis-python"
+          target="_blank"
+          class="github-btn">
+          View on GitHub →
+        </a>
+
+      </div>
+
+
+      <!-- PROJECT 5 -->
+      <div class="project-card">
+
+        <div class="project-number">
+          PROJECT 05
+        </div>
+
+        <h2>Tata Motors Stock Analysis</h2>
+
+        <p>
+          A stock market analysis project using R to examine Tata Motors stock
+          data, identify trends and perform statistical and visual analysis
+          of historical market information.
+        </p>
+
+        <div class="tags">
+          <span class="tag">R</span>
+          <span class="tag">Stock Analysis</span>
+          <span class="tag">Time Series</span>
+          <span class="tag">Visualization</span>
+        </div>
+
+        <a
+          href="https://github.com/klmanish240305/tata-motors-stock-analysis-r"
+          target="_blank"
+          class="github-btn">
+          View on GitHub →
+        </a>
+
+      </div>
+
     </section>
 
+  </main>
 
-    <!-- FOOTER -->
 
-    <footer>
+  <!-- FOOTER -->
+  <footer>
+    © 2026 K L Manish | Data Analytics & Economics
+  </footer>
 
-        © 2026 K L Manish | Economics & Data Analytics
 
-    </footer>
+  <!-- THEME SCRIPT -->
+  <script>
+
+    const themeToggle = document.getElementById("themeToggle");
+
+    function applyTheme(theme) {
+
+      if (theme === "light") {
+
+        document.body.classList.add("light-mode");
+
+        themeToggle.textContent = "🌙";
+
+      } else {
+
+        document.body.classList.remove("light-mode");
+
+        themeToggle.textContent = "☀️";
+
+      }
+
+    }
+
+
+    function toggleTheme() {
+
+      const currentTheme =
+        localStorage.getItem("theme") || "dark";
+
+      const newTheme =
+        currentTheme === "dark" ? "light" : "dark";
+
+      localStorage.setItem("theme", newTheme);
+
+      applyTheme(newTheme);
+
+    }
+
+
+    const savedTheme =
+      localStorage.getItem("theme") || "dark";
+
+    applyTheme(savedTheme);
+
+  </script>
 
 </body>
 </html>
