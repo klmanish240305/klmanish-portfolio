@@ -1,527 +1,631 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | K L Manish</title>
 
-    <title>Contact | K L Manish</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
 
-    <style>
+    body {
+      background: #07111f;
+      color: #f2f7ff;
+      line-height: 1.6;
+      transition: 0.3s ease;
+    }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    /* NAVBAR */
+    nav {
+      width: 100%;
+      padding: 16px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #07111f;
+      border-bottom: 1px solid #1b2a3d;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      transition: 0.3s ease;
+    }
 
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #07111f;
-            color: #f2f7ff;
-            line-height: 1.6;
-        }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 20px;
+      font-weight: bold;
+      color: #66e3c4;
+    }
 
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
+    .logo img {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #66e3c4;
+    }
 
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
 
-        /* =========================
-           NAVBAR
-        ========================= */
+    .nav-links {
+      display: flex;
+      gap: 22px;
+      align-items: center;
+    }
 
-        nav {
-            width: 100%;
-            padding: 20px 8%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: #07111f;
-            border-bottom: 1px solid #16263b;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
+    .nav-links a {
+      text-decoration: none;
+      color: #f2f7ff;
+      font-size: 14px;
+      transition: 0.3s;
+    }
 
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-            color: #66e3c4;
-        }
+    .nav-links a:hover {
+      color: #66e3c4;
+    }
 
-        .nav-links {
-            display: flex;
-            gap: 25px;
-            list-style: none;
-        }
+    .nav-links .active {
+      color: #66e3c4;
+    }
 
-        .nav-links a {
-            color: #c9d5e5;
-            font-size: 15px;
-            transition: 0.3s;
-        }
+    /* THEME BUTTON */
+    #themeToggle {
+      border: none;
+      background: #102238;
+      color: #ffffff;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 18px;
+      transition: 0.3s;
+    }
 
-        .nav-links a:hover {
-            color: #66e3c4;
-        }
+    #themeToggle:hover {
+      transform: scale(1.08);
+    }
 
+    /* MAIN */
+    .container {
+      width: 86%;
+      max-width: 1100px;
+      margin: auto;
+      padding: 80px 0;
+    }
 
-        /* =========================
-           PAGE HEADER
-        ========================= */
+    .page-title {
+      text-align: center;
+      margin-bottom: 55px;
+    }
 
-        .hero {
-            text-align: center;
-            padding: 80px 8% 50px;
-        }
+    .page-title h1 {
+      font-size: 44px;
+      margin-bottom: 12px;
+    }
 
-        .hero h1 {
-            font-size: 48px;
-            margin-bottom: 15px;
-        }
+    .page-title span {
+      color: #66e3c4;
+    }
 
-        .hero h1 span {
-            color: #66e3c4;
-        }
+    .page-title p {
+      color: #a9b7c8;
+      font-size: 16px;
+    }
 
-        .hero p {
-            color: #9eafc4;
-            max-width: 650px;
-            margin: auto;
-            font-size: 17px;
-        }
+    /* CONTACT GRID */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+    }
 
+    .contact-card {
+      background: #0c1a2b;
+      border: 1px solid #1b2a3d;
+      border-radius: 18px;
+      padding: 30px;
+      transition: 0.3s ease;
+    }
 
-        /* =========================
-           CONTACT SECTION
-        ========================= */
+    .contact-card:hover {
+      transform: translateY(-5px);
+      border-color: #66e3c4;
+    }
 
-        .contact-section {
-            padding: 30px 8% 90px;
-        }
+    .contact-card h2 {
+      color: #66e3c4;
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
 
-        .contact-container {
-            max-width: 900px;
-            margin: auto;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 25px;
-        }
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      margin-bottom: 20px;
+    }
 
-        .contact-card {
-            background: #0c1a2b;
-            border: 1px solid #1d334d;
-            border-radius: 15px;
-            padding: 30px;
-            transition: 0.3s;
-        }
+    .contact-icon {
+      width: 40px;
+      height: 40px;
+      min-width: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #102238;
+      border-radius: 10px;
+      font-size: 18px;
+    }
 
-        .contact-card:hover {
-            transform: translateY(-5px);
-            border-color: #66e3c4;
-        }
+    .contact-item h3 {
+      font-size: 14px;
+      margin-bottom: 3px;
+    }
 
-        .contact-card h3 {
-            color: #66e3c4;
-            font-size: 20px;
-            margin-bottom: 10px;
-        }
+    .contact-item p,
+    .contact-item a {
+      color: #b9c6d5;
+      font-size: 14px;
+      text-decoration: none;
+      word-break: break-word;
+    }
 
-        .contact-card p {
-            color: #9eafc4;
-            margin-bottom: 15px;
-            word-break: break-word;
-        }
+    .contact-item a:hover {
+      color: #66e3c4;
+    }
 
-        .contact-link {
-            color: #66e3c4;
-            font-weight: bold;
-        }
+    /* SOCIAL BUTTONS */
+    .social-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 10px;
+    }
 
-        .contact-link:hover {
-            text-decoration: underline;
-        }
+    .social-btn {
+      display: inline-block;
+      padding: 11px 18px;
+      border-radius: 8px;
+      background: #66e3c4;
+      color: #07111f;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 14px;
+      transition: 0.3s ease;
+    }
 
+    .social-btn:hover {
+      transform: translateY(-2px);
+      opacity: 0.9;
+    }
 
-        /* =========================
-           SOCIAL LINKS
-        ========================= */
+    /* RESUME */
+    .resume-section {
+      margin-top: 25px;
+      text-align: center;
+      background: #0c1a2b;
+      border: 1px solid #1b2a3d;
+      border-radius: 18px;
+      padding: 35px;
+    }
 
-        .social-section {
-            text-align: center;
-            margin-top: 50px;
-        }
+    .resume-section h2 {
+      color: #66e3c4;
+      margin-bottom: 10px;
+    }
 
-        .social-section h2 {
-            font-size: 30px;
-            margin-bottom: 20px;
-        }
+    .resume-section p {
+      color: #b9c6d5;
+      margin-bottom: 20px;
+      font-size: 15px;
+    }
 
-        .social-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
+    .resume-btn {
+      display: inline-block;
+      padding: 12px 24px;
+      background: #66e3c4;
+      color: #07111f;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: 0.3s ease;
+    }
 
-        .social-btn {
-            padding: 12px 22px;
-            border: 1px solid #66e3c4;
-            border-radius: 8px;
-            color: #66e3c4;
-            font-weight: bold;
-            transition: 0.3s;
-        }
+    .resume-btn:hover {
+      transform: translateY(-2px);
+      opacity: 0.9;
+    }
 
-        .social-btn:hover {
-            background: #66e3c4;
-            color: #07111f;
-        }
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 25px;
+      margin-top: 30px;
+      border-top: 1px solid #1b2a3d;
+      color: #8f9dad;
+      font-size: 14px;
+    }
 
+    /* LIGHT MODE */
+    body.light-mode {
+      background: #f4f7fb;
+      color: #172033;
+    }
 
-        /* =========================
-           FOOTER
-        ========================= */
+    body.light-mode nav {
+      background: #ffffff;
+      border-bottom: 1px solid #dfe5ec;
+    }
 
-        footer {
-            padding: 25px 8%;
-            text-align: center;
-            border-top: 1px solid #16263b;
-            color: #7f91a8;
-            font-size: 14px;
-        }
+    body.light-mode .nav-links a {
+      color: #172033;
+    }
 
+    body.light-mode .nav-links a:hover,
+    body.light-mode .nav-links .active {
+      color: #159f82;
+    }
 
-        /* =========================
-           TABLET
-        ========================= */
+    body.light-mode .logo {
+      color: #159f82;
+    }
 
-        @media (max-width: 850px) {
+    body.light-mode .logo img {
+      border-color: #159f82;
+    }
 
-            .nav-links {
-                gap: 12px;
-            }
+    body.light-mode #themeToggle {
+      background: #e7edf3;
+      color: #172033;
+    }
 
-            .nav-links a {
-                font-size: 13px;
-            }
+    body.light-mode .page-title p {
+      color: #657083;
+    }
 
-            .contact-container {
-                grid-template-columns: 1fr;
-            }
+    body.light-mode .contact-card,
+    body.light-mode .resume-section {
+      background: #ffffff;
+      border-color: #dfe5ec;
+    }
 
-            .hero h1 {
-                font-size: 40px;
-            }
+    body.light-mode .contact-card:hover {
+      border-color: #159f82;
+    }
 
-        }
+    body.light-mode .contact-card h2,
+    body.light-mode .resume-section h2 {
+      color: #159f82;
+    }
 
+    body.light-mode .contact-icon {
+      background: #eef3f7;
+    }
 
-        /* =========================
-           MOBILE
-        ========================= */
+    body.light-mode .contact-item p,
+    body.light-mode .contact-item a,
+    body.light-mode .resume-section p {
+      color: #536174;
+    }
 
-        @media (max-width: 600px) {
+    body.light-mode .contact-item a:hover {
+      color: #159f82;
+    }
 
-            nav {
-                padding: 15px 5%;
-            }
+    body.light-mode .social-btn,
+    body.light-mode .resume-btn {
+      background: #159f82;
+      color: #ffffff;
+    }
 
-            .logo {
-                font-size: 20px;
-            }
+    body.light-mode footer {
+      border-color: #dfe5ec;
+      color: #657083;
+    }
 
-            .nav-links {
-                gap: 8px;
-            }
+    /* MOBILE */
+    @media (max-width: 800px) {
 
-            .nav-links a {
-                font-size: 11px;
-            }
+      nav {
+        padding: 14px 5%;
+      }
 
-            .hero {
-                padding-left: 5%;
-                padding-right: 5%;
-            }
+      .nav-right {
+        gap: 12px;
+      }
 
-            .contact-section {
-                padding-left: 5%;
-                padding-right: 5%;
-            }
+      .nav-links {
+        gap: 10px;
+      }
 
-        }
+      .nav-links a {
+        font-size: 12px;
+      }
 
-    </style>
+      .logo span {
+        display: none;
+      }
 
+      .logo img {
+        width: 38px;
+        height: 38px;
+      }
+
+      .container {
+        width: 90%;
+        padding: 55px 0;
+      }
+
+      .page-title h1 {
+        font-size: 34px;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
-
 
 <body>
 
+  <!-- NAVBAR -->
+  <nav>
 
-    <!-- =========================
-         NAVBAR
-    ========================= -->
+    <div class="logo">
+      <img src="assets/profile.jpg" alt="K L Manish">
+      <span>K L Manish</span>
+    </div>
 
-    <nav>
+    <div class="nav-right">
 
-        <div class="logo">
-            KLM
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="education.html">Education</a>
+        <a href="contact.html" class="active">Contact</a>
+      </div>
+
+      <button id="themeToggle" onclick="toggleTheme()">☀️</button>
+
+    </div>
+
+  </nav>
+
+
+  <!-- MAIN -->
+  <main class="container">
+
+    <div class="page-title">
+      <h1>Get In <span>Touch</span></h1>
+      <p>Let's connect and discuss data, economics and opportunities.</p>
+    </div>
+
+
+    <!-- CONTACT INFORMATION -->
+    <section class="contact-grid">
+
+
+      <!-- CONTACT DETAILS -->
+      <div class="contact-card">
+
+        <h2>Contact Information</h2>
+
+
+        <div class="contact-item">
+
+          <div class="contact-icon">
+            📧
+          </div>
+
+          <div>
+            <h3>Email</h3>
+            <a href="mailto:klmanish2005@gmail.com">
+              klmanish2005@gmail.com
+            </a>
+          </div>
+
         </div>
 
-        <ul class="nav-links">
 
-            <li>
-                <a href="index.html">Home</a>
-            </li>
+        <div class="contact-item">
 
-            <li>
-                <a href="about.html">About</a>
-            </li>
+          <div class="contact-icon">
+            📱
+          </div>
 
-            <li>
-                <a href="skills.html">Skills</a>
-            </li>
+          <div>
+            <h3>Phone</h3>
+            <a href="tel:+919880153960">
+              +91 9880153960
+            </a>
+          </div>
 
-            <li>
-                <a href="projects.html">Projects</a>
-            </li>
-
-            <li>
-                <a href="education.html">Education</a>
-            </li>
-
-            <li>
-                <a href="contact.html">Contact</a>
-            </li>
-
-        </ul>
-
-    </nav>
+        </div>
 
 
+        <div class="contact-item">
 
-    <!-- =========================
-         PAGE HEADER
-    ========================= -->
+          <div class="contact-icon">
+            📍
+          </div>
 
-    <section class="hero">
+          <div>
+            <h3>Location</h3>
+            <p>
+              Currently based in Pune, Maharashtra, India
+            </p>
+          </div>
 
-        <h1>
-            Get In <span>Touch</span>
-        </h1>
+        </div>
 
-        <p>
-            Feel free to reach out to me for opportunities,
-            collaborations, projects or professional discussions.
+
+        <div class="contact-item">
+
+          <div class="contact-icon">
+            💻
+          </div>
+
+          <div>
+            <h3>GitHub</h3>
+            <a
+              href="https://github.com/klmanish240305"
+              target="_blank">
+              github.com/klmanish240305
+            </a>
+          </div>
+
+        </div>
+
+
+        <div class="contact-item">
+
+          <div class="contact-icon">
+            🔗
+          </div>
+
+          <div>
+            <h3>LinkedIn</h3>
+            <a
+              href="https://www.linkedin.com/in/k-l-manish-9b29602b8/"
+              target="_blank">
+              LinkedIn Profile
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- CONNECT -->
+      <div class="contact-card">
+
+        <h2>Let's Connect</h2>
+
+        <p style="color:#b9c6d5; margin-bottom:25px;">
+          I am interested in data analytics, economics, econometrics,
+          business intelligence, forecasting and research opportunities.
+          Feel free to connect with me through the platforms below.
         </p>
 
-    </section>
 
+        <div class="social-links">
 
+          <a
+            href="https://github.com/klmanish240305"
+            target="_blank"
+            class="social-btn">
+            GitHub
+          </a>
 
-    <!-- =========================
-         CONTACT INFORMATION
-    ========================= -->
+          <a
+            href="https://www.linkedin.com/in/k-l-manish-9b29602b8/"
+            target="_blank"
+            class="social-btn">
+            LinkedIn
+          </a>
 
-    <section class="contact-section">
-
-        <div class="contact-container">
-
-
-            <!-- EMAIL -->
-
-            <div class="contact-card">
-
-                <h3>
-                    Email
-                </h3>
-
-                <p>
-                    klmanish2005@gmail.com
-                </p>
-
-                <a
-                    href="mailto:klmanish2005@gmail.com"
-                    class="contact-link"
-                >
-                    Send me an email →
-                </a>
-
-            </div>
-
-
-            <!-- PHONE -->
-
-            <div class="contact-card">
-
-                <h3>
-                    Phone
-                </h3>
-
-                <p>
-                    +91 9880153960
-                </p>
-
-                <a
-                    href="tel:+919880153960"
-                    class="contact-link"
-                >
-                    Call me →
-                </a>
-
-            </div>
-
-
-            <!-- LOCATION -->
-
-            <div class="contact-card">
-
-                <h3>
-                    Location
-                </h3>
-
-                <p>
-                    Currently based in Pune, Maharashtra, India
-                </p>
-
-            </div>
-
-
-            <!-- GITHUB -->
-
-            <div class="contact-card">
-
-                <h3>
-                    GitHub
-                </h3>
-
-                <p>
-                    github.com/klmanish240305
-                </p>
-
-                <a
-                    href="https://github.com/klmanish240305"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="contact-link"
-                >
-                    Visit my GitHub →
-                </a>
-
-            </div>
-
-
-            <!-- LINKEDIN -->
-
-            <div class="contact-card">
-
-                <h3>
-                    LinkedIn
-                </h3>
-
-                <p>
-                    linkedin.com/in/k-l-manish-9b29602b8
-                </p>
-
-                <a
-                    href="https://www.linkedin.com/in/k-l-manish-9b29602b8/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="contact-link"
-                >
-                    Connect with me →
-                </a>
-
-            </div>
-
-
-            <!-- RESUME -->
-
-            <div class="contact-card">
-
-                <h3>
-                    Resume
-                </h3>
-
-                <p>
-                    View or download my resume.
-                </p>
-
-                <a
-                    href="assets/resume.pdf"
-                    target="_blank"
-                    class="contact-link"
-                >
-                    View Resume →
-                </a>
-
-            </div>
-
+          <a
+            href="mailto:klmanish2005@gmail.com"
+            class="social-btn">
+            Email Me
+          </a>
 
         </div>
 
-
-
-        <!-- =========================
-             SOCIAL BUTTONS
-        ========================= -->
-
-        <div class="social-section">
-
-            <h2>
-                Connect With Me
-            </h2>
-
-            <div class="social-buttons">
-
-                <a
-                    href="https://github.com/klmanish240305"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="social-btn"
-                >
-                    GitHub
-                </a>
-
-                <a
-                    href="https://www.linkedin.com/in/k-l-manish-9b29602b8/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="social-btn"
-                >
-                    LinkedIn
-                </a>
-
-                <a
-                    href="mailto:klmanish2005@gmail.com"
-                    class="social-btn"
-                >
-                    Email Me
-                </a>
-
-            </div>
-
-        </div>
+      </div>
 
     </section>
 
 
+    <!-- RESUME -->
+    <section class="resume-section">
 
-    <!-- =========================
-         FOOTER
-    ========================= -->
+      <h2>My Resume</h2>
 
-    <footer>
+      <p>
+        Download my resume to learn more about my education,
+        skills, experience and projects.
+      </p>
 
-        © 2026 K L Manish | Economics & Data Analytics
+      <a
+        href="assets/resume.pdf"
+        target="_blank"
+        class="resume-btn">
+        📄 View / Download Resume
+      </a>
 
-    </footer>
+    </section>
 
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer>
+    © 2026 K L Manish | Data Analytics & Economics
+  </footer>
+
+
+  <!-- THEME SCRIPT -->
+  <script>
+
+    const themeToggle = document.getElementById("themeToggle");
+
+    function applyTheme(theme) {
+
+      if (theme === "light") {
+
+        document.body.classList.add("light-mode");
+
+        themeToggle.textContent = "🌙";
+
+      } else {
+
+        document.body.classList.remove("light-mode");
+
+        themeToggle.textContent = "☀️";
+
+      }
+
+    }
+
+
+    function toggleTheme() {
+
+      const currentTheme =
+        localStorage.getItem("theme") || "dark";
+
+      const newTheme =
+        currentTheme === "dark" ? "light" : "dark";
+
+      localStorage.setItem("theme", newTheme);
+
+      applyTheme(newTheme);
+
+    }
+
+
+    const savedTheme =
+      localStorage.getItem("theme") || "dark";
+
+    applyTheme(savedTheme);
+
+  </script>
 
 </body>
-
 </html>
