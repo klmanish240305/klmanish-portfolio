@@ -1,619 +1,520 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-<meta charset="UTF-8">
-
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
-
-<title>About | K L Manish</title>
-
-
-<style>
-
-/* =========================
-   BASIC SETTINGS
-========================= */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-
-    font-family: Arial, Helvetica, sans-serif;
-
-    background:
-        radial-gradient(
-            circle at 10% 10%,
-            rgba(102, 227, 196, 0.12),
-            transparent 30%
-        ),
-        radial-gradient(
-            circle at 90% 20%,
-            rgba(122, 167, 255, 0.12),
-            transparent 30%
-        ),
-        #080d1a;
-
-    color: #f5f7fb;
-
-    line-height: 1.6;
-}
-
-
-/* =========================
-   NAVBAR
-========================= */
-
-header {
-
-    position: sticky;
-
-    top: 0;
-
-    z-index: 1000;
-
-    background: rgba(8, 13, 26, 0.92);
-
-    backdrop-filter: blur(15px);
-
-    border-bottom: 1px solid #26324a;
-}
-
-
-.navbar {
-
-    width: 90%;
-
-    max-width: 1150px;
-
-    height: 75px;
-
-    margin: auto;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: space-between;
-}
-
-
-.logo {
-
-    font-size: 26px;
-
-    font-weight: 800;
-
-    color: white;
-}
-
-
-.logo span {
-
-    color: #66e3c4;
-}
-
-
-.nav-links {
-
-    display: flex;
-
-    gap: 25px;
-
-    list-style: none;
-}
-
-
-.nav-links a {
-
-    color: #aab5c8;
-
-    text-decoration: none;
-
-    font-size: 15px;
-
-    transition: 0.3s;
-}
-
-
-.nav-links a:hover {
-
-    color: #66e3c4;
-}
-
-
-/* =========================
-   PAGE
-========================= */
-
-.container {
-
-    width: 90%;
-
-    max-width: 1150px;
-
-    margin: auto;
-}
-
-
-.page {
-
-    padding: 100px 0;
-}
-
-
-.small-title {
-
-    color: #66e3c4;
-
-    font-size: 14px;
-
-    font-weight: bold;
-
-    letter-spacing: 3px;
-
-    margin-bottom: 20px;
-}
-
-
-h1 {
-
-    font-size: clamp(45px, 6vw, 70px);
-
-    line-height: 1.1;
-
-    margin-bottom: 30px;
-}
-
-
-h1 span {
-
-    color: #66e3c4;
-}
-
-
-.intro {
-
-    max-width: 850px;
-
-    color: #aab5c8;
-
-    font-size: 18px;
-
-    line-height: 1.8;
-
-    margin-bottom: 60px;
-}
-
-
-/* =========================
-   CARDS
-========================= */
-
-.cards {
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(3, 1fr);
-
-    gap: 25px;
-}
-
-
-.card {
-
-    background:
-        rgba(18, 26, 45, 0.85);
-
-    border: 1px solid #26324a;
-
-    border-radius: 18px;
-
-    padding: 30px;
-
-    transition: 0.3s;
-}
-
-
-.card:hover {
-
-    transform: translateY(-7px);
-
-    border-color: #66e3c4;
-
-    box-shadow:
-        0 15px 40px
-        rgba(0,0,0,0.25);
-}
-
-
-.card h2 {
-
-    font-size: 23px;
-
-    margin-bottom: 15px;
-}
-
-
-.card p {
-
-    color: #aab5c8;
-
-    line-height: 1.7;
-}
-
-
-/* =========================
-   TAGS
-========================= */
-
-.tags {
-
-    display: flex;
-
-    flex-wrap: wrap;
-
-    gap: 10px;
-
-    margin-top: 20px;
-}
-
-
-.tags span {
-
-    padding: 7px 13px;
-
-    border-radius: 20px;
-
-    background: #1b2740;
-
-    color: #d5ddec;
-
-    font-size: 13px;
-}
-
-
-/* =========================
-   HIGHLIGHT
-========================= */
-
-.highlight {
-
-    margin-top: 60px;
-
-    padding: 35px;
-
-    border-radius: 20px;
-
-    border: 1px solid #26324a;
-
-    background:
-        linear-gradient(
-            135deg,
-            rgba(102,227,196,0.08),
-            rgba(122,167,255,0.08)
-        );
-}
-
-
-.highlight h2 {
-
-    margin-bottom: 15px;
-}
-
-
-.highlight p {
-
-    color: #aab5c8;
-
-    max-width: 900px;
-}
-
-
-/* =========================
-   FOOTER
-========================= */
-
-footer {
-
-    border-top: 1px solid #26324a;
-
-    padding: 30px;
-
-    text-align: center;
-
-    color: #7f8ba1;
-}
-
-
-/* =========================
-   MOBILE
-========================= */
-
-@media(max-width: 800px) {
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>About | K L Manish</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background: #07111f;
+      color: #f2f7ff;
+      line-height: 1.6;
+      transition: 0.3s ease;
+    }
+
+    /* NAVBAR */
+    nav {
+      width: 100%;
+      padding: 16px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #07111f;
+      border-bottom: 1px solid #1b2a3d;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      transition: 0.3s ease;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 20px;
+      font-weight: bold;
+      color: #66e3c4;
+    }
+
+    .logo img {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #66e3c4;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
 
     .nav-links {
+      display: flex;
+      gap: 22px;
+      align-items: center;
+    }
 
+    .nav-links a {
+      text-decoration: none;
+      color: #f2f7ff;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #66e3c4;
+    }
+
+    .nav-links .active {
+      color: #66e3c4;
+    }
+
+    /* THEME BUTTON */
+    #themeToggle {
+      border: none;
+      background: #102238;
+      color: #ffffff;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 18px;
+      transition: 0.3s;
+    }
+
+    #themeToggle:hover {
+      transform: scale(1.08);
+    }
+
+    /* MAIN */
+    .container {
+      width: 86%;
+      max-width: 1100px;
+      margin: auto;
+      padding: 80px 0;
+    }
+
+    .page-title {
+      text-align: center;
+      margin-bottom: 55px;
+    }
+
+    .page-title h1 {
+      font-size: 44px;
+      margin-bottom: 12px;
+    }
+
+    .page-title span {
+      color: #66e3c4;
+    }
+
+    .page-title p {
+      color: #a9b7c8;
+      font-size: 16px;
+    }
+
+    /* ABOUT */
+    .about-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 35px;
+      margin-bottom: 60px;
+    }
+
+    .about-card {
+      background: #0c1a2b;
+      padding: 35px;
+      border-radius: 18px;
+      border: 1px solid #1b2a3d;
+      transition: 0.3s ease;
+    }
+
+    .about-card:hover {
+      transform: translateY(-5px);
+      border-color: #66e3c4;
+    }
+
+    .about-card h2 {
+      color: #66e3c4;
+      margin-bottom: 18px;
+      font-size: 24px;
+    }
+
+    .about-card p {
+      color: #c5d0dc;
+      font-size: 15px;
+      margin-bottom: 15px;
+    }
+
+    /* FOCUS */
+    .focus-section {
+      margin-top: 20px;
+    }
+
+    .focus-section h2 {
+      text-align: center;
+      font-size: 30px;
+      margin-bottom: 30px;
+    }
+
+    .focus-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .focus-card {
+      background: #0c1a2b;
+      padding: 28px;
+      border-radius: 16px;
+      border: 1px solid #1b2a3d;
+      transition: 0.3s ease;
+    }
+
+    .focus-card:hover {
+      transform: translateY(-5px);
+      border-color: #66e3c4;
+    }
+
+    .focus-card h3 {
+      color: #66e3c4;
+      margin-bottom: 12px;
+      font-size: 19px;
+    }
+
+    .focus-card p {
+      color: #b9c6d5;
+      font-size: 14px;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 25px;
+      margin-top: 30px;
+      border-top: 1px solid #1b2a3d;
+      color: #8f9dad;
+      font-size: 14px;
+    }
+
+    /* LIGHT MODE */
+    body.light-mode {
+      background: #f4f7fb;
+      color: #172033;
+    }
+
+    body.light-mode nav {
+      background: #ffffff;
+      border-bottom: 1px solid #dfe5ec;
+    }
+
+    body.light-mode .nav-links a {
+      color: #172033;
+    }
+
+    body.light-mode .nav-links a:hover,
+    body.light-mode .nav-links .active {
+      color: #159f82;
+    }
+
+    body.light-mode .logo {
+      color: #159f82;
+    }
+
+    body.light-mode .logo img {
+      border-color: #159f82;
+    }
+
+    body.light-mode #themeToggle {
+      background: #e7edf3;
+      color: #172033;
+    }
+
+    body.light-mode .page-title p {
+      color: #657083;
+    }
+
+    body.light-mode .about-card,
+    body.light-mode .focus-card {
+      background: #ffffff;
+      border-color: #dfe5ec;
+    }
+
+    body.light-mode .about-card:hover,
+    body.light-mode .focus-card:hover {
+      border-color: #159f82;
+    }
+
+    body.light-mode .about-card h2,
+    body.light-mode .focus-card h3 {
+      color: #159f82;
+    }
+
+    body.light-mode .about-card p,
+    body.light-mode .focus-card p {
+      color: #536174;
+    }
+
+    body.light-mode footer {
+      border-color: #dfe5ec;
+      color: #657083;
+    }
+
+    /* MOBILE */
+    @media (max-width: 800px) {
+
+      nav {
+        padding: 14px 5%;
+      }
+
+      .nav-right {
+        gap: 12px;
+      }
+
+      .nav-links {
+        gap: 10px;
+      }
+
+      .nav-links a {
+        font-size: 12px;
+      }
+
+      .logo span {
         display: none;
-    }
+      }
 
-    .cards {
+      .logo img {
+        width: 38px;
+        height: 38px;
+      }
 
+      .container {
+        width: 90%;
+        padding: 55px 0;
+      }
+
+      .page-title h1 {
+        font-size: 34px;
+      }
+
+      .about-section {
         grid-template-columns: 1fr;
+      }
+
+      .focus-grid {
+        grid-template-columns: 1fr;
+      }
     }
-
-    .page {
-
-        padding: 70px 0;
-    }
-
-    h1 {
-
-        font-size: 45px;
-    }
-
-}
-
-</style>
-
+  </style>
 </head>
-
 
 <body>
 
+  <!-- NAVBAR -->
+  <nav>
 
-<!-- =========================
-     NAVIGATION
-========================= -->
+    <div class="logo">
+      <img src="assets/profile.jpg" alt="K L Manish">
+      <span>K L Manish</span>
+    </div>
 
-<header>
+    <div class="nav-right">
 
-<nav class="navbar">
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html" class="active">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="education.html">Education</a>
+        <a href="contact.html">Contact</a>
+      </div>
 
+      <button id="themeToggle" onclick="toggleTheme()">☀️</button>
 
-<div class="logo">
+    </div>
 
-K L Manish<span>.</span>
+  </nav>
 
-</div>
 
+  <!-- MAIN CONTENT -->
+  <main class="container">
 
-<ul class="nav-links">
+    <div class="page-title">
+      <h1>About <span>Me</span></h1>
+      <p>Economics with a Data-Driven Approach</p>
+    </div>
 
-<li>
-<a href="index.html">Home</a>
-</li>
 
-<li>
-<a href="about.html">About</a>
-</li>
+    <!-- ABOUT CARDS -->
+    <section class="about-section">
 
-<li>
-<a href="skills.html">Skills</a>
-</li>
+      <div class="about-card">
+        <h2>Who I Am</h2>
 
-<li>
-<a href="projects.html">Projects</a>
-</li>
+        <p>
+          I am K L Manish, an Economics student specializing in Data Analytics.
+          I am interested in combining economic theory with data-driven methods
+          to understand real-world economic and business problems.
+        </p>
 
-<li>
-<a href="education.html">Education</a>
-</li>
+        <p>
+          My academic background in Economics has given me a strong foundation
+          in economic theory, statistics and econometrics, while my Data Analytics
+          specialization has helped me develop practical skills in Python, SQL,
+          Excel, Power BI and data visualization.
+        </p>
 
-<li>
-<a href="contact.html">Contact</a>
-</li>
+      </div>
 
-</ul>
 
-</nav>
+      <div class="about-card">
+        <h2>My Approach</h2>
 
-</header>
+        <p>
+          I enjoy working with datasets, cleaning and analysing data, identifying
+          patterns and presenting insights in a clear and understandable way.
+        </p>
 
+        <p>
+          I am particularly interested in using statistical and econometric
+          techniques along with modern data analytics tools to support
+          research, forecasting and decision-making.
+        </p>
 
+      </div>
 
-<!-- =========================
-     ABOUT SECTION
-========================= -->
+    </section>
 
-<section class="page">
 
-<div class="container">
+    <!-- FOCUS -->
+    <section class="focus-section">
 
+      <h2>What I <span style="color:#66e3c4;">Focus On</span></h2>
 
-<p class="small-title">
+      <div class="focus-grid">
 
-ABOUT ME
+        <div class="focus-card">
+          <h3>📊 Data Analytics</h3>
+          <p>
+            Exploring, cleaning and analysing datasets to identify meaningful
+            patterns and generate useful insights.
+          </p>
+        </div>
 
-</p>
 
+        <div class="focus-card">
+          <h3>📈 Econometrics</h3>
+          <p>
+            Applying econometric techniques to understand relationships between
+            economic variables and support empirical research.
+          </p>
+        </div>
 
-<h1>
 
-Economics with a
-<span>Data-Driven Approach.</span>
+        <div class="focus-card">
+          <h3>🔍 Research & Analysis</h3>
+          <p>
+            Working with economic data and research questions using statistical
+            analysis, interpretation and evidence-based methods.
+          </p>
+        </div>
 
-</h1>
 
+        <div class="focus-card">
+          <h3>⚡ EV Market Analysis</h3>
+          <p>
+            Studying electric vehicle adoption, charging infrastructure and
+            the transition between electric and internal combustion vehicles.
+          </p>
+        </div>
 
-<p class="intro">
 
-I am currently pursuing my MSc in Economics at
-Symbiosis School of Economics.
+        <div class="focus-card">
+          <h3>💻 Python & SQL</h3>
+          <p>
+            Using Python and SQL for data cleaning, analysis, database queries,
+            visualization and working with real-world datasets.
+          </p>
+        </div>
 
-My academic interests combine economics,
-econometrics and data analytics.
 
-I enjoy working with datasets, cleaning and
-transforming data, creating visualizations and
-applying statistical methods to answer
-real-world questions.
+        <div class="focus-card">
+          <h3>📉 Forecasting</h3>
+          <p>
+            Exploring time-series data and forecasting techniques to understand
+            trends and support future-oriented analysis.
+          </p>
+        </div>
 
-I am particularly interested in using data
-to understand economic trends and support
-evidence-based decision making.
+      </div>
 
-</p>
+    </section>
 
+  </main>
 
 
-<!-- CARDS -->
+  <!-- FOOTER -->
+  <footer>
+    © 2026 K L Manish | Data Analytics & Economics
+  </footer>
 
-<div class="cards">
 
+  <!-- THEME SCRIPT -->
+  <script>
 
-<div class="card">
+    const themeToggle = document.getElementById("themeToggle");
 
-<h2>
+    function applyTheme(theme) {
 
-Data Analytics
+      if (theme === "light") {
 
-</h2>
+        document.body.classList.add("light-mode");
 
-<p>
+        themeToggle.textContent = "🌙";
 
-I work with data to identify patterns,
-relationships and useful insights.
+      } else {
 
-My workflow includes data cleaning,
-exploratory data analysis, visualization
-and interpretation.
+        document.body.classList.remove("light-mode");
 
-</p>
+        themeToggle.textContent = "☀️";
 
+      }
 
-<div class="tags">
+    }
 
-<span>Python</span>
 
-<span>Pandas</span>
+    function toggleTheme() {
 
-<span>Excel</span>
+      const currentTheme =
+        localStorage.getItem("theme") || "dark";
 
-<span>Visualization</span>
+      const newTheme =
+        currentTheme === "dark" ? "light" : "dark";
 
-</div>
+      localStorage.setItem("theme", newTheme);
 
-</div>
+      applyTheme(newTheme);
 
+    }
 
 
-<div class="card">
+    const savedTheme =
+      localStorage.getItem("theme") || "dark";
 
-<h2>
+    applyTheme(savedTheme);
 
-Econometrics
-
-</h2>
-
-<p>
-
-My economics background gives me an interest
-in applying econometric methods to real-world
-economic problems and datasets.
-
-</p>
-
-
-<div class="tags">
-
-<span>OLS</span>
-
-<span>Logit</span>
-
-<span>Probit</span>
-
-<span>Time Series</span>
-
-</div>
-
-</div>
-
-
-
-<div class="card">
-
-<h2>
-
-Research
-
-</h2>
-
-<p>
-
-I am interested in economic research,
-forecasting and understanding how economic
-and social variables interact.
-
-</p>
-
-
-<div class="tags">
-
-<span>Research</span>
-
-<span>Forecasting</span>
-
-<span>Data Analysis</span>
-
-</div>
-
-</div>
-
-
-</div>
-
-
-
-<!-- CURRENT FOCUS -->
-
-<div class="highlight">
-
-<h2>
-
-Current Focus
-
-</h2>
-
-<p>
-
-My current academic work focuses on data analytics
-and economic research, including my work on
-electric vehicle adoption trends, charging
-infrastructure and EV versus ICE vehicles.
-
-I am also developing my skills in Python, SQL,
-R, Excel, Stata and statistical analysis.
-
-</p>
-
-</div>
-
-
-</div>
-
-</section>
-
-
-
-<footer>
-
-© 2026 K L Manish • Data Analytics Portfolio
-
-</footer>
-
+  </script>
 
 </body>
-
 </html>
