@@ -3,433 +3,330 @@
 
 <head>
 
-<meta charset="UTF-8">
-
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
-
-<title>Education | K L Manish</title>
-
-<style>
-
-/* =========================
-   BASIC SETTINGS
-========================= */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-
-    font-family: Arial, Helvetica, sans-serif;
-
-    background:
-        radial-gradient(
-            circle at 10% 10%,
-            rgba(102, 227, 196, 0.12),
-            transparent 30%
-        ),
-        radial-gradient(
-            circle at 90% 20%,
-            rgba(122, 167, 255, 0.12),
-            transparent 30%
-        ),
-        #080d1a;
-
-    color: #f5f7fb;
-
-    line-height: 1.6;
-}
-
-
-/* =========================
-   NAVBAR
-========================= */
-
-header {
-
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-
-    background: rgba(8, 13, 26, 0.92);
-
-    backdrop-filter: blur(15px);
-
-    border-bottom: 1px solid #26324a;
-}
-
-
-.navbar {
-
-    width: 90%;
-    max-width: 1150px;
-
-    height: 75px;
-
-    margin: auto;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: space-between;
-}
-
-
-.logo {
-
-    font-size: 26px;
-
-    font-weight: 800;
-
-    color: white;
-}
-
-
-.logo span {
-    color: #66e3c4;
-}
-
-
-.nav-links {
-
-    display: flex;
-
-    gap: 25px;
-
-    list-style: none;
-}
-
-
-.nav-links a {
-
-    color: #aab5c8;
-
-    text-decoration: none;
-
-    font-size: 15px;
-
-    transition: 0.3s;
-}
-
-
-.nav-links a:hover {
-    color: #66e3c4;
-}
-
-
-/* =========================
-   MAIN
-========================= */
-
-.container {
-
-    width: 90%;
-
-    max-width: 1150px;
-
-    margin: auto;
-}
-
-
-.page {
-
-    padding: 100px 0;
-}
-
-
-.small-title {
-
-    color: #66e3c4;
-
-    font-size: 14px;
-
-    font-weight: bold;
-
-    letter-spacing: 3px;
-
-    margin-bottom: 20px;
-}
-
-
-h1 {
-
-    font-size: clamp(45px, 6vw, 70px);
-
-    line-height: 1.1;
-
-    margin-bottom: 20px;
-}
-
-
-h1 span {
-    color: #66e3c4;
-}
-
-
-.subtitle {
-
-    color: #aab5c8;
-
-    font-size: 18px;
-
-    max-width: 750px;
-
-    margin-bottom: 70px;
-}
-
-
-/* =========================
-   TIMELINE
-========================= */
-
-.timeline {
-
-    position: relative;
-
-    max-width: 900px;
-
-    margin: auto;
-
-    padding-left: 45px;
-}
-
-
-.timeline::before {
-
-    content: "";
-
-    position: absolute;
-
-    left: 10px;
-
-    top: 0;
-
-    bottom: 0;
-
-    width: 2px;
-
-    background: #26324a;
-}
-
-
-.timeline-item {
-
-    position: relative;
-
-    margin-bottom: 55px;
-
-    padding: 30px;
-
-    background:
-        rgba(18, 26, 45, 0.9);
-
-    border: 1px solid #26324a;
-
-    border-radius: 18px;
-
-    transition: 0.3s;
-}
-
-
-.timeline-item:hover {
-
-    transform: translateX(5px);
-
-    border-color: #66e3c4;
-
-    box-shadow:
-        0 15px 40px
-        rgba(0,0,0,0.25);
-}
-
-
-.timeline-dot {
-
-    position: absolute;
-
-    left: -43px;
-
-    top: 35px;
-
-    width: 16px;
-
-    height: 16px;
-
-    border-radius: 50%;
-
-    background: #66e3c4;
-
-    box-shadow:
-        0 0 20px
-        rgba(102,227,196,0.5);
-}
-
-
-.timeline-year {
-
-    display: inline-block;
-
-    color: #66e3c4;
-
-    font-size: 13px;
-
-    font-weight: bold;
-
-    letter-spacing: 2px;
-
-    margin-bottom: 10px;
-}
-
-
-.timeline-item h2 {
-
-    font-size: 25px;
-
-    margin-bottom: 7px;
-}
-
-
-.timeline-item h3 {
-
-    color: #d5ddec;
-
-    font-size: 17px;
-
-    font-weight: normal;
-
-    margin-bottom: 15px;
-}
-
-
-.timeline-item p {
-
-    color: #aab5c8;
-
-    line-height: 1.7;
-}
-
-
-/* =========================
-   SUBJECTS
-========================= */
-
-.subjects {
-
-    display: flex;
-
-    flex-wrap: wrap;
-
-    gap: 8px;
-
-    margin-top: 20px;
-}
-
-
-.subjects span {
-
-    padding: 6px 11px;
-
-    border-radius: 20px;
-
-    background: #1b2740;
-
-    color: #d5ddec;
-
-    font-size: 13px;
-}
-
-
-/* =========================
-   CURRENT FOCUS
-========================= */
-
-.focus {
-
-    margin-top: 60px;
-
-    padding: 35px;
-
-    border-radius: 20px;
-
-    border: 1px solid #26324a;
-
-    background:
-        linear-gradient(
-            135deg,
-            rgba(102,227,196,0.07),
-            rgba(122,167,255,0.07)
-        );
-}
-
-
-.focus h2 {
-    margin-bottom: 12px;
-}
-
-
-.focus p {
-    color: #aab5c8;
-}
-
-
-/* =========================
-   FOOTER
-========================= */
-
-footer {
-
-    border-top: 1px solid #26324a;
-
-    padding: 30px;
-
-    text-align: center;
-
-    color: #7f8ba1;
-}
-
-
-/* =========================
-   MOBILE
-========================= */
-
-@media(max-width: 700px) {
-
-    .nav-links {
-        display: none;
-    }
-
-    .page {
-        padding: 70px 0;
-    }
-
-    .timeline {
-        padding-left: 30px;
-    }
-
-    .timeline::before {
-        left: 5px;
-    }
-
-    .timeline-dot {
-        left: -37px;
-    }
-
-    h1 {
-        font-size: 45px;
-    }
-
-}
-
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Education | K L Manish</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #07111f;
+            color: #f2f7ff;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        nav {
+            width: 100%;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #07111f;
+            border-bottom: 1px solid #16263b;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #66e3c4;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #c9d5e5;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #66e3c4;
+        }
+
+
+        /* =========================
+           PAGE HEADER
+        ========================= */
+
+        .hero {
+            text-align: center;
+            padding: 80px 8% 50px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 span {
+            color: #66e3c4;
+        }
+
+        .hero p {
+            color: #9eafc4;
+            max-width: 700px;
+            margin: auto;
+            font-size: 17px;
+        }
+
+
+        /* =========================
+           EDUCATION TIMELINE
+        ========================= */
+
+        .education-section {
+            padding: 40px 8% 70px;
+        }
+
+        .timeline {
+            max-width: 850px;
+            margin: auto;
+            position: relative;
+        }
+
+        .timeline::before {
+            content: "";
+            position: absolute;
+            left: 20px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #1d334d;
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 65px;
+            margin-bottom: 45px;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 10px;
+            top: 5px;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background: #66e3c4;
+            border: 4px solid #07111f;
+            box-shadow: 0 0 0 2px #66e3c4;
+        }
+
+        .education-card {
+            background: #0c1a2b;
+            border: 1px solid #1d334d;
+            border-radius: 15px;
+            padding: 30px;
+            transition: 0.3s;
+        }
+
+        .education-card:hover {
+            transform: translateY(-4px);
+            border-color: #66e3c4;
+        }
+
+        .year {
+            display: inline-block;
+            color: #66e3c4;
+            font-weight: bold;
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+
+        .education-card h2 {
+            font-size: 25px;
+            margin-bottom: 8px;
+        }
+
+        .college {
+            color: #c9d5e5;
+            font-size: 17px;
+            margin-bottom: 15px;
+        }
+
+        .education-card p {
+            color: #9eafc4;
+            font-size: 15px;
+        }
+
+        .highlight {
+            color: #66e3c4;
+            font-weight: bold;
+        }
+
+
+        /* =========================
+           AREA OF INTEREST
+        ========================= */
+
+        .interests-section {
+            padding: 30px 8% 90px;
+        }
+
+        .interests-container {
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title h2 {
+            font-size: 34px;
+            margin-bottom: 12px;
+        }
+
+        .section-title p {
+            color: #9eafc4;
+        }
+
+        .interest-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .interest-card {
+            background: #0c1a2b;
+            border: 1px solid #1d334d;
+            border-radius: 12px;
+            padding: 25px;
+            transition: 0.3s;
+        }
+
+        .interest-card:hover {
+            transform: translateY(-4px);
+            border-color: #66e3c4;
+        }
+
+        .interest-card h3 {
+            color: #66e3c4;
+            margin-bottom: 10px;
+            font-size: 19px;
+        }
+
+        .interest-card p {
+            color: #9eafc4;
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            padding: 25px 8%;
+            text-align: center;
+            border-top: 1px solid #16263b;
+            color: #7f91a8;
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           TABLET
+        ========================= */
+
+        @media (max-width: 850px) {
+
+            .nav-links {
+                gap: 12px;
+            }
+
+            .nav-links a {
+                font-size: 13px;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .interest-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 600px) {
+
+            nav {
+                padding: 15px 5%;
+            }
+
+            .logo {
+                font-size: 20px;
+            }
+
+            .nav-links {
+                gap: 8px;
+            }
+
+            .nav-links a {
+                font-size: 11px;
+            }
+
+            .education-section {
+                padding-left: 5%;
+                padding-right: 5%;
+            }
+
+            .interests-section {
+                padding-left: 5%;
+                padding-right: 5%;
+            }
+
+            .hero {
+                padding-left: 5%;
+                padding-right: 5%;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .timeline-item {
+                padding-left: 50px;
+            }
+
+            .interest-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
 
 </head>
 
@@ -437,267 +334,305 @@ footer {
 <body>
 
 
-<!-- =========================
-     NAVIGATION
-========================= -->
+    <!-- =========================
+         NAVBAR
+    ========================= -->
 
-<header>
+    <nav>
 
-<nav class="navbar">
+        <div class="logo">
+            KLM
+        </div>
 
-<div class="logo">
+        <ul class="nav-links">
 
-K L Manish<span>.</span>
+            <li>
+                <a href="index.html">Home</a>
+            </li>
 
-</div>
+            <li>
+                <a href="about.html">About</a>
+            </li>
 
+            <li>
+                <a href="skills.html">Skills</a>
+            </li>
 
-<ul class="nav-links">
+            <li>
+                <a href="projects.html">Projects</a>
+            </li>
 
-<li>
-<a href="index.html">Home</a>
-</li>
+            <li>
+                <a href="education.html">Education</a>
+            </li>
 
-<li>
-<a href="about.html">About</a>
-</li>
+            <li>
+                <a href="contact.html">Contact</a>
+            </li>
 
-<li>
-<a href="skills.html">Skills</a>
-</li>
+        </ul>
 
-<li>
-<a href="projects.html">Projects</a>
-</li>
+    </nav>
 
-<li>
-<a href="education.html">Education</a>
-</li>
 
-<li>
-<a href="contact.html">Contact</a>
-</li>
 
-</ul>
+    <!-- =========================
+         PAGE HEADER
+    ========================= -->
 
-</nav>
+    <section class="hero">
 
-</header>
+        <h1>
+            My <span>Education</span>
+        </h1>
 
+        <p>
+            My academic journey from Economics to Data Analytics.
+        </p>
 
+    </section>
 
-<!-- =========================
-     EDUCATION
-========================= -->
 
-<section class="page">
 
-<div class="container">
+    <!-- =========================
+         EDUCATION TIMELINE
+    ========================= -->
 
+    <section class="education-section">
 
-<p class="small-title">
-ACADEMIC JOURNEY
-</p>
+        <div class="timeline">
 
 
-<h1>
+            <!-- B.A. ECONOMICS -->
 
-My
-<span>Education.</span>
+            <div class="timeline-item">
 
-</h1>
+                <div class="timeline-dot"></div>
 
+                <div class="education-card">
 
-<p class="subtitle">
+                    <div class="year">
+                        2022 – 2025
+                    </div>
 
-My academic background combines economics,
-statistics, econometrics and data analytics.
+                    <h2>
+                        B.A. Economics
+                    </h2>
 
-</p>
+                    <div class="college">
+                        Modern College of Arts, Science and Commerce
+                    </div>
 
+                    <p>
 
+                        Completed my B.A. Economics with a
+                        <span class="highlight">CGPA of 7.8</span>.
 
-<!-- =========================
-     TIMELINE
-========================= -->
+                        During my undergraduate studies, I developed
+                        a strong foundation in microeconomics,
+                        macroeconomics, statistics and econometrics,
+                        while building analytical and quantitative skills.
 
-<div class="timeline">
+                        This foundation helped me develop an interest
+                        in working with economic data and motivated me
+                        to pursue Data Analytics alongside Economics.
 
+                    </p>
 
-<!-- MSc -->
+                </div>
 
-<div class="timeline-item">
+            </div>
 
-<div class="timeline-dot"></div>
 
-<div class="timeline-year">
-CURRENT
-</div>
 
-<h2>
-MSc Economics
-</h2>
+            <!-- M.SC. ECONOMICS -->
 
-<h3>
-Symbiosis School of Economics
-</h3>
+            <div class="timeline-item">
 
-<p>
+                <div class="timeline-dot"></div>
 
-Currently pursuing my Master's degree in Economics,
-with a focus on quantitative analysis, econometrics,
-economic research and data analytics.
+                <div class="education-card">
 
-</p>
+                    <div class="year">
+                        2025 – 2027
+                    </div>
 
+                    <h2>
+                        M.Sc. Economics
+                    </h2>
 
-<div class="subjects">
+                    <div class="college">
+                        Symbiosis School of Economics
+                    </div>
 
-<span>Econometrics</span>
+                    <p>
 
-<span>Economic Growth</span>
+                        Currently pursuing my M.Sc. Economics at
+                        Symbiosis School of Economics with a
+                        <span class="highlight">
+                            Specialisation in Data Analytics
+                        </span>.
 
-<span>Data Analytics</span>
+                        I am building my knowledge in data analytics,
+                        econometrics, statistical analysis, Python,
+                        SQL, data visualization and forecasting,
+                        while applying these skills through academic
+                        projects and real-world datasets.
 
-<span>Research Methods</span>
+                    </p>
 
-<span>Microeconomics</span>
+                </div>
 
-<span>Macroeconomics</span>
+            </div>
 
-</div>
 
-</div>
+        </div>
 
+    </section>
 
 
-<!-- DATA ANALYTICS -->
 
-<div class="timeline-item">
+    <!-- =========================
+         AREA OF INTEREST
+    ========================= -->
 
-<div class="timeline-dot"></div>
+    <section class="interests-section">
 
-<div class="timeline-year">
-SPECIALIZATION
-</div>
+        <div class="interests-container">
 
-<h2>
-Data Analytics
-</h2>
 
-<h3>
-Analytics & Quantitative Skills
-</h3>
+            <div class="section-title">
 
-<p>
+                <h2>
+                    Area of Interest
+                </h2>
 
-Developing practical skills in Python, SQL, R,
-Excel, statistical analysis, data visualization
-and machine learning fundamentals.
+                <p>
+                    Areas I am interested in exploring through
+                    economics and data analytics.
+                </p>
 
-</p>
+            </div>
 
 
-<div class="subjects">
+            <div class="interest-grid">
 
-<span>Python</span>
 
-<span>SQL</span>
+                <!-- INTEREST 1 -->
 
-<span>R</span>
+                <div class="interest-card">
 
-<span>Excel</span>
+                    <h3>
+                        Data Analytics
+                    </h3>
 
-<span>Statistics</span>
+                    <p>
+                        Exploring data to identify patterns,
+                        trends and meaningful insights.
+                    </p>
 
-<span>Data Visualization</span>
+                </div>
 
-</div>
 
-</div>
+                <!-- INTEREST 2 -->
 
+                <div class="interest-card">
 
+                    <h3>
+                        Econometrics
+                    </h3>
 
-<!-- RESEARCH -->
+                    <p>
+                        Applying statistical and econometric
+                        methods to understand economic relationships.
+                    </p>
 
-<div class="timeline-item">
+                </div>
 
-<div class="timeline-dot"></div>
 
-<div class="timeline-year">
-RESEARCH INTEREST
-</div>
+                <!-- INTEREST 3 -->
 
-<h2>
-Economic Research
-</h2>
+                <div class="interest-card">
 
-<h3>
-Data-Driven Economic Analysis
-</h3>
+                    <h3>
+                        Economic Data Analysis
+                    </h3>
 
-<p>
+                    <p>
+                        Analyzing economic data to understand
+                        trends and support evidence-based conclusions.
+                    </p>
 
-My research interests include electric vehicle
-adoption, charging infrastructure, forecasting,
-economic trends and the use of quantitative
-methods to study real-world economic issues.
+                </div>
 
-</p>
 
+                <!-- INTEREST 4 -->
 
-<div class="subjects">
+                <div class="interest-card">
 
-<span>EV Adoption</span>
+                    <h3>
+                        Data Visualization
+                    </h3>
 
-<span>Forecasting</span>
+                    <p>
+                        Presenting complex datasets through
+                        clear and meaningful visualizations
+                        and dashboards.
+                    </p>
 
-<span>Economic Data</span>
+                </div>
 
-<span>Applied Research</span>
 
-</div>
+                <!-- INTEREST 5 -->
 
-</div>
+                <div class="interest-card">
 
+                    <h3>
+                        Forecasting
+                    </h3>
 
-</div>
+                    <p>
+                        Using statistical and analytical techniques
+                        to study trends and develop forecasts.
+                    </p>
 
+                </div>
 
 
-<!-- =========================
-     CURRENT FOCUS
-========================= -->
+                <!-- INTEREST 6 -->
 
-<div class="focus">
+                <div class="interest-card">
 
-<h2>
-Current Academic Focus
-</h2>
+                    <h3>
+                        EV Market & Energy Economics
+                    </h3>
 
-<p>
+                    <p>
+                        Understanding electric vehicle adoption,
+                        market trends and the transition from
+                        ICE to EVs.
+                    </p>
 
-I am currently strengthening my analytical skills
-by combining economics with programming and data
-analytics. My goal is to use quantitative methods
-to answer practical economic and business questions.
+                </div>
 
-</p>
 
-</div>
+            </div>
 
+        </div>
 
-</div>
+    </section>
 
-</section>
 
 
+    <!-- =========================
+         FOOTER
+    ========================= -->
 
-<footer>
+    <footer>
 
-© 2026 K L Manish • Data Analytics Portfolio
+        © 2026 K L Manish | Economics & Data Analytics
 
-</footer>
+    </footer>
 
 
 </body>
